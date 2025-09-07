@@ -1,15 +1,15 @@
 fn picky_eater(food: &str) -> &str {
-    if food == "strawberry" {
-        "Yummy!"
-    } else if food == "potato" {
-        "I guess I can eat that."
+    if food == "полуничка" {
+        "Ммммм!"
+    } else if food == "картопелька" {
+        "Я зможу..."
     } else {
-        "No thanks!"
+        "Ні, тільки не це!"
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]
@@ -18,18 +18,18 @@ mod tests {
 
     #[test]
     fn yummy_food() {
-        assert_eq!(picky_eater("strawberry"), "Yummy!");
+        assert_eq!(picky_eater("полуничка"), "Ммммм!");
     }
 
     #[test]
     fn neutral_food() {
-        assert_eq!(picky_eater("potato"), "I guess I can eat that.");
+        assert_eq!(picky_eater("картопелька"), "Я зможу...");
     }
 
     #[test]
     fn default_disliked_food() {
-        assert_eq!(picky_eater("broccoli"), "No thanks!");
-        assert_eq!(picky_eater("gummy bears"), "No thanks!");
-        assert_eq!(picky_eater("literally anything"), "No thanks!");
+        assert_eq!(picky_eater("броколі"), "Ні, тільки не це!");
+        assert_eq!(picky_eater("желейні ведмедики"), "Ні, тільки не це!");
+        assert_eq!(picky_eater("буквально будь-що"), "Ні, тільки не це!");
     }
 }

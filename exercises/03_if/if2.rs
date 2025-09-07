@@ -1,37 +1,37 @@
-// TODO: Fix the compiler error on this function.
+// TODO: Виправте помилки в цій функції
 fn picky_eater(food: &str) -> &str {
-    if food == "strawberry" {
-        "Yummy!"
+    if food == "полуничка" {
+        "Ммммм!"
     } else {
         1
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут можете за бажанням поекспериментувати.
 }
 
-// TODO: Read the tests to understand the desired behavior.
-// Make all tests pass without changing them.
+// TODO: Прочитайте код тестів, щоб зрозуміти бажану поведінку функції
+// Зробіть так, щоб усі тести пройшли успішно, але не змінюйте тести
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     fn yummy_food() {
-        // This means that calling `picky_eater` with the argument "strawberry" should return "Yummy!".
-        assert_eq!(picky_eater("strawberry"), "Yummy!");
+        // Це значить що виклик `picky_eater` з аргументом "полуничка" має повернути "Ммммм!".
+        assert_eq!(picky_eater("полуничка"), "Ммммм!");
     }
 
     #[test]
     fn neutral_food() {
-        assert_eq!(picky_eater("potato"), "I guess I can eat that.");
+        assert_eq!(picky_eater("картопелька"), "Я зможу...");
     }
 
     #[test]
     fn default_disliked_food() {
-        assert_eq!(picky_eater("broccoli"), "No thanks!");
-        assert_eq!(picky_eater("gummy bears"), "No thanks!");
-        assert_eq!(picky_eater("literally anything"), "No thanks!");
+        assert_eq!(picky_eater("броколі"), "Ні, тільки не це!");
+        assert_eq!(picky_eater("желейні ведмедики"), "Ні, тільки не це!");
+        assert_eq!(picky_eater("буквально будь-що"), "Ні, тільки не це!");
     }
 }

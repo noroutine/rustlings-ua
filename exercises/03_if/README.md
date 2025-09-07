@@ -1,7 +1,7 @@
-# If
+# Оператор If
 
-`if`, the most basic (but still surprisingly versatile!) type of control flow, is what you'll learn here.
+`if` — найбазовіший (але все ще дивовижно універсальний!) тип керування потоком виконання, який ви тут вивчите.
 
-## Further information
+## Додаткова інформація
 
-- [Control Flow - if expressions](https://doc.rust-lang.org/book/ch03-05-control-flow.html#if-expressions)
+- Керування потоком виконання - if-вирази [Control Flow - if expressions](https://doc.rust-lang.org/book/ch03-05-control-flow.html#if-expressions)

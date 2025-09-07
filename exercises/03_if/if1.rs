@@ -1,16 +1,16 @@
 fn bigger(a: i32, b: i32) -> i32 {
-    // TODO: Complete this function to return the bigger number!
-    // If both numbers are equal, any of them can be returned.
-    // Do not use:
-    // - another function call
-    // - additional variables
+    // TODO: Доповніть цю функцію, щоб вона повертала більше число!
+    // Якщо обидва числа рівні, можна повернути будь-яке з них.
+    // Не використовуйте:
+    // - виклик іншої функції
+    // - додаткові змінні
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут можете за бажанням поекспериментувати.
 }
 
-// Don't mind this for now :)
+// Поки що не звертайте на це увагу :)
 #[cfg(test)]
 mod tests {
     use super::*;
