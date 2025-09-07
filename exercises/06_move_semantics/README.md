@@ -1,10 +1,10 @@
-# Move Semantics
+# Семантика переміщення (Move Semantics)
 
-These exercises are adapted from [pnkfelix](https://github.com/pnkfelix)'s [Rust Tutorial](https://pnkfelix.github.io/rust-examples-icfp2014/) -- Thank you Felix!!!
+Ці вправи адаптовані з [посібника з Rust](https://pnkfelix.github.io/rust-examples-icfp2014/) від [pnkfelix](https://github.com/pnkfelix) -- Дякуємо Felix!!!
 
-## Further information
+## Додаткова інформація
 
-For this section, the book links are especially important.
+Для цього розділу посилання на книгу особливо важливі.
 
-- [Ownership](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html)
-- [Reference and borrowing](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)
+- [Володіння (Ownership)](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html)
+- [Посилання та запозичення (Reference and borrowing)](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)

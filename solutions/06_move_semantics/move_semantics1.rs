@@ -1,6 +1,6 @@
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
     let mut vec = vec;
-    //  ^^^ added
+    //  ^^^ додано
 
     vec.push(88);
 
@@ -8,7 +8,7 @@ fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням експериментувати.
 }
 
 #[cfg(test)]
@@ -19,7 +19,7 @@ mod tests {
     fn move_semantics1() {
         let vec0 = vec![22, 44, 66];
         let vec1 = fill_vec(vec0);
-        // `vec0` can't be accessed anymore because it is moved to `fill_vec`.
+        // `vec0` більше не може бути доступний, оскільки він переміщений в `fill_vec`.
         assert_eq!(vec1, vec![22, 44, 66, 88]);
     }
 }

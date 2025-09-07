@@ -1,12 +1,12 @@
 fn fill_vec(mut vec: Vec<i32>) -> Vec<i32> {
-    //      ^^^ added
+    //      ^^^ додано
     vec.push(88);
 
     vec
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням експериментувати.
 }
 
 #[cfg(test)]

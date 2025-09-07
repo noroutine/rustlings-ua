@@ -7,15 +7,15 @@ fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням експериментувати.
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    // TODO: Make both vectors `vec0` and `vec1` accessible at the same time to
-    // fix the compiler error in the test.
+    // TODO: Зробіть обидва вектори `vec0` та `vec1` доступними одночасно, щоб
+    // виправити помилку компіляції в тесті.
     #[test]
     fn move_semantics2() {
         let vec0 = vec![22, 44, 66];

@@ -1,14 +1,14 @@
 #![allow(clippy::ptr_arg)]
 
-// TODO: Fix the compiler errors without changing anything except adding or
-// removing references (the character `&`).
+// TODO: Виправте помилки компілятора, не змінюючи нічого, окрім додавання або
+// видалення посилань (символ `&`).
 
-// Shouldn't take ownership
+// Не повинна забирати володіння (ownership)
 fn get_char(data: String) -> char {
     data.chars().last().unwrap()
 }
 
-// Should take ownership
+// Повинна забирати володіння (ownership)
 fn string_uppercase(mut data: &String) {
     data = data.to_uppercase();
 
@@ -16,7 +16,7 @@ fn string_uppercase(mut data: &String) {
 }
 
 fn main() {
-    let data = "Rust is great!".to_string();
+    let data = "Rust неймовірний!".to_string();
 
     get_char(data);
 

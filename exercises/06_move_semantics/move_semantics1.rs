@@ -1,4 +1,4 @@
-// TODO: Fix the compiler error in this function.
+// TODO: Виправте помилку компіляції в цій функції.
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
     let vec = vec;
 
@@ -8,7 +8,7 @@ fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням експериментувати.
 }
 
 #[cfg(test)]
