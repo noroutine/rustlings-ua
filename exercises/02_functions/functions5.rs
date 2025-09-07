@@ -1,9 +1,9 @@
-// TODO: Fix the function body without changing the signature.
+// TODO: Виправ тіло функції, не змінюючи сигнатуру
 fn square(num: i32) -> i32 {
     num * num;
 }
 
 fn main() {
     let answer = square(3);
-    println!("The square of 3 is {answer}");
+    println!("3 в квадраті буде {answer}");
 }

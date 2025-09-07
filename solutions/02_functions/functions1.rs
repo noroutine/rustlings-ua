@@ -1,6 +1,6 @@
-// Some function with the name `call_me` without arguments or a return value.
+// Проста функція `call_me` без аргументів та повернення результату
 fn call_me() {
-    println!("Hello world!");
+    println!("Привітулькі!");
 }
 
 fn main() {

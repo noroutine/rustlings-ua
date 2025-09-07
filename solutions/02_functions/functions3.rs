@@ -5,6 +5,6 @@ fn call_me(num: u8) {
 }
 
 fn main() {
-    // `call_me` expects an argument.
+    // Щоб викликати `call_me` потрібно вказати аргумент.
     call_me(5);
 }
