@@ -4,6 +4,18 @@ bin = [
   { name = "intro1_sol", path = "solutions/00_intro/intro1.rs" },
   { name = "intro2", path = "exercises/00_intro/intro2.rs" },
   { name = "intro2_sol", path = "solutions/00_intro/intro2.rs" },
+  { name = "variables1", path = "../exercises/01_variables/variables1.rs" },
+  { name = "variables1_sol", path = "../solutions/01_variables/variables1.rs" },
+  { name = "variables2", path = "../exercises/01_variables/variables2.rs" },
+  { name = "variables2_sol", path = "../solutions/01_variables/variables2.rs" },
+  { name = "variables3", path = "../exercises/01_variables/variables3.rs" },
+  { name = "variables3_sol", path = "../solutions/01_variables/variables3.rs" },
+  { name = "variables4", path = "../exercises/01_variables/variables4.rs" },
+  { name = "variables4_sol", path = "../solutions/01_variables/variables4.rs" },
+  { name = "variables5", path = "../exercises/01_variables/variables5.rs" },
+  { name = "variables5_sol", path = "../solutions/01_variables/variables5.rs" },
+  { name = "variables6", path = "../exercises/01_variables/variables6.rs" },
+  { name = "variables6_sol", path = "../solutions/01_variables/variables6.rs" },
 ]
 
 [package]
