@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/crabopodibni.png" alt="Ракоподібні" width="200">
+</p>
+
 # [Растуни](https://rustlings.rust-lang.org) 🦀
 
 Ласкаво просимо до растунів - вправ Rustlings українською 🇺🇦 😃
