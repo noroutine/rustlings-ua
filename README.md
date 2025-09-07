@@ -145,7 +145,7 @@ rustlings
 
 ### Перед початком
 
-**Обов'язково прочитайте [CONTRIBUTION_GUIDELINES.md](./CONTRIBUTION_GUIDELINES.md)** — там містяться:
+**Обов'язково прочитайте [CONTRIBUTING.md](./CONTRIBUTING.md)** — там містяться:
 - Детальні правила стилю та термінології
 - Приклади правильного перекладу
 - Процес створення Pull Request
