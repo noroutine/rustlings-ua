@@ -1,11 +1,11 @@
 fn main() {
-    // TODO: Create an array called `a` with at least 100 elements in it.
+    // TODO: Створіть масив (array) з назвою `a` що містить принаймні 100 елементів.
     // let a = ???
 
     if a.len() >= 100 {
-        println!("Wow, that's a big array!");
+        println!("Ого, оце величезний масив!");
     } else {
-        println!("Meh, I eat arrays like that for breakfast.");
-        panic!("Array not big enough, more elements needed");
+        println!("Хм, та я такі масиви на сніданок їм.");
+        panic!("Масив замалий, більше елементів треба");
     }
 }

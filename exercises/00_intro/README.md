@@ -5,4 +5,4 @@ Rust використовує макроси `print!` та `println!` для в�
 ## Додatkова інформація
 
 - [Hello World](https://doc.rust-lang.org/rust-by-example/hello.html)
-- [Форматований вивід](https://doc.rust-lang.org/rust-by-example/hello/print.html)
+- [Форматований вивід (Formatted print)](https://doc.rust-lang.org/rust-by-example/hello/print.html)

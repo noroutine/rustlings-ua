@@ -1,9 +1,9 @@
-# Primitive Types
+# Примітивні типи (Primitive Types)
 
-Rust has a couple of basic types that are directly implemented into the
-compiler. In this section, we'll go through the most important ones.
+Rust має кілька базових типів, які безпосередньо реалізовані в
+компіляторі. У цьому розділі ми розглянемо найважливіші з них.
 
-## Further information
+## Додаткова інформація
 
-- [Data Types](https://doc.rust-lang.org/book/ch03-02-data-types.html)
-- [The Slice Type](https://doc.rust-lang.org/book/ch04-03-slices.html)
+- [Типи даних (Data Types)](https://doc.rust-lang.org/book/ch03-02-data-types.html)
+- [Тип зрізу (The Slice Type)](https://doc.rust-lang.org/book/ch04-03-slices.html)

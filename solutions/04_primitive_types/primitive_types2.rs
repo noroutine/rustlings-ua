@@ -1,21 +1,21 @@
 fn main() {
-    let my_first_initial = 'C';
+    let my_first_initial = 'Є';
     if my_first_initial.is_alphabetic() {
-        println!("Alphabetical!");
+        println!("Алфавітний!");
     } else if my_first_initial.is_numeric() {
-        println!("Numerical!");
+        println!("Числовий!");
     } else {
-        println!("Neither alphabetic nor numeric!");
+        println!("Ні алфавітний, ні числовий!");
     }
 
-    // Example with an emoji.
+    // Приклад з емодзі.
     let your_character = '🦀';
 
     if your_character.is_alphabetic() {
-        println!("Alphabetical!");
+        println!("Алфавітний!");
     } else if your_character.is_numeric() {
-        println!("Numerical!");
+        println!("Числовий!");
     } else {
-        println!("Neither alphabetic nor numeric!");
+        println!("Ні алфавітний, ні числовий!");
     }
 }

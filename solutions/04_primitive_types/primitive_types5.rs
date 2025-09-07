@@ -1,8 +1,8 @@
 fn main() {
-    let cat = ("Furry McFurson", 3.5);
+    let cat = ("Пушок МакВусенко", 3.5);
 
-    // Destructuring the tuple.
+    // Деструктуризація кортежу.
     let (name, age) = cat;
 
-    println!("{name} is {age} years old");
+    println!("{name} має вік {age} років");
 }

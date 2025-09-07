@@ -1,11 +1,11 @@
 fn main() {
-    // An array with 100 elements of the value 42.
+    // Масив зі 100 елементів зі значенням 42.
     let a = [42; 100];
 
     if a.len() >= 100 {
-        println!("Wow, that's a big array!");
+        println!("Ого, оце величезний масив!");
     } else {
-        println!("Meh, I eat arrays like that for breakfast.");
-        panic!("Array not big enough, more elements needed");
+        println!("Хм, та я такі масиви на сніданок їм.");
+        panic!("Масив замалий, більше елементів треба");
     }
 }

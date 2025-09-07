@@ -1,28 +1,28 @@
-// Characters (`char`)
+// Символи (Characters) (`char`)
 
 fn main() {
-    // Note the _single_ quotes, these are different from the double quotes
-    // you've been seeing around.
-    let my_first_initial = 'C';
+    // Зверніть увагу на _одинарні_ лапки, вони відрізняються від подвійних лапок,
+    // які ви бачили раніше.
+    let my_first_initial = 'Є';
     if my_first_initial.is_alphabetic() {
-        println!("Alphabetical!");
+        println!("Алфавітний!");
     } else if my_first_initial.is_numeric() {
-        println!("Numerical!");
+        println!("Числовий!");
     } else {
-        println!("Neither alphabetic nor numeric!");
+        println!("Ні алфавітний, ні числовий!");
     }
 
-    // TODO: Analogous to the example before, declare a variable called `your_character`
-    // below with your favorite character.
-    // Try a letter, try a digit (in single quotes), try a special character, try a character
-    // from a different language than your own, try an emoji 😉
+    // TODO: Аналогічно до прикладу вище, оголосіть змінну з назвою `your_character`
+    // нижче з вашим улюбленим символом.
+    // Спробуйте літеру, спробуйте цифру (в одинарних лапках), спробуйте спеціальний символ,
+    // спробуйте символ з іншої мови, спробуйте емодзі 😉
     // let your_character = '';
 
     if your_character.is_alphabetic() {
-        println!("Alphabetical!");
+        println!("Алфавітний!");
     } else if your_character.is_numeric() {
-        println!("Numerical!");
+        println!("Числовий!");
     } else {
-        println!("Neither alphabetic nor numeric!");
+        println!("Ні алфавітний, ні числовий!");
     }
 }
