@@ -600,8 +600,8 @@ Options можуть мати значення `Some` з внутрішнім з
 без внутрішнього значення.
 
 Є кілька способів отримати внутрішнє значення, ви можете використати `unwrap` або
-зіставлення зразків (pattern match). Unwrapping найпростіший, але як зробити це безпечно, щоб
-воно не панікувало пізніше?"""
+зіставлення зразків (pattern match). Розгортка(unwrapping) найпростіша, але як зробити це безпечно, щоб
+воно не викликало паніку в програмі пізніше?"""
 
 [[exercises]]
 name = "options2"
@@ -612,7 +612,7 @@ hint = """
 - https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html
 - https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html
 
-Пам'ятайте, що `Option`и можуть бути вкладені в інструкції if-let і while-let.
+Пам'ятайте, що `Option`и можуть бути вкладені в інструкції if-let та while-let.
 
 Наприклад: `if let Some(Some(x)) = y`
 
