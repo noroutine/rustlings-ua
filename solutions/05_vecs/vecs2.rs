@@ -9,23 +9,23 @@ fn vec_loop(input: &[i32]) -> Vec<i32> {
 }
 
 fn vec_map_example(input: &[i32]) -> Vec<i32> {
-    // An example of collecting a vector after mapping.
-    // We map each element of the `input` slice to its value plus 1.
-    // If the input is `[1, 2, 3]`, the output is `[2, 3, 4]`.
+    // Приклад збору вектора після відображення.
+    // Ми відображаємо кожен елемент зрізу `input` до його значення плюс 1.
+    // Якщо вхід `[1, 2, 3]`, то вихід `[2, 3, 4]`.
     input.iter().map(|element| element + 1).collect()
 }
 
 fn vec_map(input: &[i32]) -> Vec<i32> {
-    // We will dive deeper into iterators, but for now, this is all what you
-    // had to do!
-    // Advanced note: This method is more efficient because it automatically
-    // preallocates enough capacity. This can be done manually in `vec_loop`
-    // using `Vec::with_capacity(input.len())` instead of `Vec::new()`.
+    // Ми глибше зануримось в ітератори, але поки це все, що вам
+    // потрібно було зробити!
+    // Примітка для допитливих: Цей спосіб ефективніший, оскільки заздалегідь
+    // виділяє достатню памʼять. Це можна зробити і вручну в `vec_loop`,
+    // використовуючи `Vec::with_capacity(input.len())` замість `Vec::new()`.
     input.iter().map(|element| 2 * element).collect()
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням експериментувати.
 }
 
 #[cfg(test)]

@@ -1,14 +1,14 @@
 fn array_and_vec() -> ([i32; 4], Vec<i32>) {
-    let a = [10, 20, 30, 40]; // Array
+    let a = [10, 20, 30, 40]; // Масив (Array)
 
-    // Used the `vec!` macro.
+    // Використали макрос `vec!`.
     let v = vec![10, 20, 30, 40];
 
     (a, v)
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням експериментувати.
 }
 
 #[cfg(test)]
