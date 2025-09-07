@@ -1,8 +1,8 @@
-# Functions
+# Функції (Functions)
 
-Here, you'll learn how to write functions and how the Rust compiler can help you debug errors even
-in more complex code.
+Тут ви навчитеся писати функції (functions) і як компілятор Rust може допомогти вам налагоджувати помилки навіть
+у більш складному коді.
 
-## Further information
+## Додаткова інформація
 
-- [How Functions Work](https://doc.rust-lang.org/book/ch03-03-how-functions-work.html)
+- [Як працюють функції](https://doc.rust-lang.org/book/ch03-03-how-functions-work.html)

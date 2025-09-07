@@ -144,52 +144,52 @@ name = "functions1"
 dir = "02_functions"
 test = false
 hint = """
-This `main` function is calling a function that it expects to exist, but the
-function doesn't exist. It expects this function to have the name `call_me`.
-It also expects this function to not take any arguments and not return a value.
-Sounds a lot like `main`, doesn't it?"""
+Ця функція `main` викликає функцію, яка, як очікується, існує, але
+функція не існує. Вона очікує, що ця функція має назву `call_me`.
+Вона також очікує, що ця функція не приймає жодних аргументів і не повертає значення.
+Звучить дуже схоже на `main`, чи не так?"""
 
 [[exercises]]
 name = "functions2"
 dir = "02_functions"
 test = false
 hint = """
-Rust requires that all parts of a function's signature have type annotations,
-but `call_me` is missing the type annotation of `num`."""
+Rust вимагає, щоб усі частини сигнатури функції (function's signature) мали анотації типів,
+але в `call_me` відсутня анотація типу для `num`."""
 
 [[exercises]]
 name = "functions3"
 dir = "02_functions"
 test = false
 hint = """
-This time, the function *declaration* is okay, but there's something wrong
-with the place where we are calling the function."""
+Цього разу з оголошенням функції (function declaration) все гаразд, але щось не так
+з місцем, де ми викликаємо функцію."""
 
 [[exercises]]
 name = "functions4"
 dir = "02_functions"
 test = false
 hint = """
-The error message points to the function `sale_price` and says it expects a type
-after `->`. This is where the function's return type should be.
-Take a look at the `is_even` function for an example!"""
+Повідомлення про помилку вказує на функцію `sale_price` і каже, що очікується тип
+після `->`. Тут має бути тип повернення функції (function's return type).
+Подивіться на функцію `is_even` як на приклад!"""
 
 [[exercises]]
 name = "functions5"
 dir = "02_functions"
 test = false
 hint = """
-This is a really common error that can be fixed by removing one character.
-It happens because Rust distinguishes between expressions and statements:
-Expressions return a value based on their operand(s), and statements simply
-return a `()` type which behaves just like `void` in C/C++.
+Це дуже поширена помилка, яку можна виправити, видаливши один символ.
+Це відбувається тому, що Rust розрізняє вирази та інструкції (expressions and statements):
+Вирази повертають значення на основі своїх операндів, а інструкції просто
+повертають тип `()`, який поводиться як `void` у C/C++.
 
-We want to return a value with the type `i32` from the `square` function, but
-it is returning the type `()`.
+Ми хочемо повернути значення типу `i32` з функції `square`, але
+вона повертає тип `()`.
 
-There are two solutions:
-1. Add the `return` keyword before `num * num;`
-2. Remove the semicolon `;` after `num * num`"""
+Є два рішення:
+1. Додати ключове слово `return` перед `num * num;`
+2. Видалити крапку з комою `;` після `num * num`"""
 
 # IF
 
@@ -197,40 +197,40 @@ There are two solutions:
 name = "if1"
 dir = "03_if"
 hint = """
-It's possible to do this in one line if you would like!
+Це можна зробити в одному рядку, якщо хочете!
 
-Some similar examples from other languages:
-- In C(++) this would be: `a > b ? a : b`
-- In Python this would be:  `a if a > b else b`
+Деякі подібні приклади з інших мов:
+- У C/C++ це було б: `a > b ? a : b`
+- У Python це було б: `a if a > b else b`
 
-Remember in Rust that:
-- The `if` condition does not need to be surrounded by parentheses
-- `if`/`else` conditionals are expressions
-- Each condition is followed by a `{}` block"""
+Пам'ятайте, що в Rust:
+- умова `if` не повинна бути оточена дужками
+- умовні конструкції `if`/`else` є виразами (expressions)
+- кожна умова супроводжується блоком `{}`"""
 
 [[exercises]]
 name = "if2"
 dir = "03_if"
 hint = """
-For that first compiler error, it's important in Rust that each conditional
-block returns the same type!
+Стосовно тієї першої помилки компілятора, в Rust важливо, щоб кожен умовний
+блок повертав той самий тип!
 
-To get the tests passing, you will need a couple conditions checking different
-input values. Read the tests to find out what they expect."""
+Щоб тести пройшли, вам знадобиться кілька умов, що перевіряють різні
+вхідні значення. Прочитайте тести, щоб дізнатися, що вони очікують."""
 
 [[exercises]]
 name = "if3"
 dir = "03_if"
 hint = """
-In Rust, every arm of an `if` expression has to return the same type of value.
-Make sure the type is consistent across all arms."""
+У Rust кожна гілка виразу `if` має повертати значення того самого типу.
+Переконайтеся, що тип узгоджений у всіх гілках."""
 
 # QUIZ 1
 
 [[exercises]]
 name = "quiz1"
 dir = "quizzes"
-hint = "No hints this time ;)"
+hint = "Цього разу без підказок ;)"
 
 # PRIMITIVE TYPES
 
@@ -239,44 +239,43 @@ name = "primitive_types1"
 dir = "04_primitive_types"
 test = false
 hint = """
-In Rust, a boolean can be negated using the operator `!` before it.
-Example: `!true == false`
-This also works with boolean variables."""
+У Rust логічне (булеве, boolean) значення можна заперечити за допомогою оператора `!` перед ним.
+Приклад: `!true == false`
+Це також працює з булевими змінними."""
 
 [[exercises]]
 name = "primitive_types2"
 dir = "04_primitive_types"
 test = false
-hint = "No hints this time ;)"
+hint = "Цього разу без підказок ;)"
 
 [[exercises]]
 name = "primitive_types3"
 dir = "04_primitive_types"
 test = false
 hint = """
-There's a shorthand to initialize arrays with a certain size that doesn't
-require you to type in 100 items (but you certainly can if you want!).
+Є скорочення для ініціалізації масивів (arrays) певного розміру, яке не
+вимагає введення 100 елементів (але ви, звичайно, можете, якщо хочете!).
 
-For example, you can do:
+Наприклад, ви можете зробити:
 ```
 let array = ["Are we there yet?"; 100];
 ```
 
-Bonus: what are some other things you could have that would return `true`
-for `a.len() >= 100`?"""
+Бонус: що ще може повертати `true` для `a.len() >= 100`?"""
 
 [[exercises]]
 name = "primitive_types4"
 dir = "04_primitive_types"
 hint = """
-Take a look at the 'Understanding Ownership -> Slices -> Other Slices' section
-of the book: https://doc.rust-lang.org/book/ch04-03-slices.html and use the
-starting and ending (plus one) indices of the items in the array that you want
-to end up in the slice.
+Подивіться на розділ 'Understanding Ownership -> Slices -> Other Slices'
+книги: https://doc.rust-lang.org/book/ch04-03-slices.html і використайте
+початковий та кінцевий (плюс один) індекси елементів у масиві, які ви хочете
+отримати в зрізі (slice).
 
-If you're curious why the first argument of `assert_eq!` does not have an
-ampersand for a reference since the second argument is a reference, take a look
-at the coercion chapter of the nomicon:
+Якщо вам цікаво, чому перший аргумент `assert_eq!` не має
+амперсанда для посилання (reference), оскільки другий аргумент є посиланням, подивіться
+на розділ Номікону про приведення типів:
 https://doc.rust-lang.org/nomicon/coercions.html"""
 
 [[exercises]]
@@ -284,23 +283,23 @@ name = "primitive_types5"
 dir = "04_primitive_types"
 test = false
 hint = """
-Take a look at the 'Data Types -> The Tuple Type' section of the book:
+Подивіться на розділ 'Data Types -> The Tuple Type' книги:
 https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
-Particularly the part about destructuring (second to last example in the
-section).
+Особливо на частину про деструктуризацію (destructuring) (передостанній приклад у
+розділі).
 
-You'll need to make a pattern to bind `name` and `age` to the appropriate parts
-of the tuple."""
+Вам потрібно створити патерн для прив'язування `name` та `age` до відповідних частин
+набору (tuple)."""
 
 [[exercises]]
 name = "primitive_types6"
 dir = "04_primitive_types"
 hint = """
-While you could use a destructuring `let` for the tuple here, try
-indexing into it instead, as explained in the last example of the
-'Data Types -> The Tuple Type' section of the book:
+Хоча ви могли б використати деструктуризуючий `let` для кортежу тут, спробуйте
+індексацію замість цього, як пояснено в останньому прикладі
+розділу 'Data Types -> The Tuple Type' книги:
 https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
-Now, you have another tool in your toolbox!"""
+Тепер у вас є ще один інструмент у вашому наборі!"""
 
 # VECS
 
@@ -308,30 +307,30 @@ Now, you have another tool in your toolbox!"""
 name = "vecs1"
 dir = "05_vecs"
 hint = """
-In Rust, there are two ways to define a Vector.
-1. One way is to use the `Vec::new()` function to create a new vector
-   and fill it with the `push()` method.
-2. The second way is to use the `vec![]` macro and define your elements
-   inside the square brackets. This way is simpler when you exactly know
-   the initial values.
+У Rust є два способи визначити вектор (Vector).
+1. Один спосіб — використати функцію `Vec::new()` для створення нового вектора
+   і заповнити його методом `push()`.
+2. Другий спосіб — використати макрос `vec![]` і визначити ваші елементи
+   всередині квадратних дужок. Цей спосіб простіший, коли ви точно знаєте
+   початкові значення.
 
-Check this chapter: https://doc.rust-lang.org/book/ch08-01-vectors.html
-of the Rust book to learn more."""
+Перевірте цей розділ: https://doc.rust-lang.org/book/ch08-01-vectors.html
+книги Rust, щоб дізнатися більше."""
 
 [[exercises]]
 name = "vecs2"
 dir = "05_vecs"
 hint = """
-In the first function, we create an empty vector and want to push new elements
-to it.
+У першій функції ми створюємо порожній вектор і хочемо додати нові елементи
+до нього.
 
-In the second function, we map the values of the input and collect them into
-a vector.
+У другій функції ми відображаємо значення вхідних даних і збираємо їх у
+вектор.
 
-After you've completed both functions, decide for yourself which approach you
-like better.
+Після завершення з обома функціями вирішіть для себе, який підхід вам
+більше подобається.
 
-What do you think is the more commonly used pattern under Rust developers?"""
+Як ви думаєте, який патерн більш поширений серед розробників Rust?"""
 
 # MOVE SEMANTICS
 
@@ -339,45 +338,45 @@ What do you think is the more commonly used pattern under Rust developers?"""
 name = "move_semantics1"
 dir = "06_move_semantics"
 hint = """
-So you've got the "cannot borrow `vec` as mutable, as it is not declared as
-mutable" error on the line where we push an element to the vector, right?
+Отже, ви отримали помилку "cannot borrow `vec` as mutable, as it is not declared as
+mutable" на рядку, де ми додаємо елемент до вектора, правильно?
 
-The fix for this is going to be adding one keyword, and the addition is NOT on
-the line where we push to the vector (where the error is).
+Виправлення цього полягає в додаванні одного ключового слова, і додавання НЕ в тому
+рядку, де ми додаємо до вектора (де помилка).
 
-Try accessing `vec0` after having called `fill_vec()`. See what happens!"""
+Спробуйте отримати доступ до `vec0` після виклику `fill_vec()`. Подивіться, що станеться!"""
 
 [[exercises]]
 name = "move_semantics2"
 dir = "06_move_semantics"
 hint = """
-When running this exercise for the first time, you'll notice an error about
-"borrow of moved value". In Rust, when an argument is passed to a function and
-it's not explicitly returned, you can't use the original variable anymore.
-We call this "moving" a variable. When we pass `vec0` into `fill_vec`, it's
-being "moved" into `vec1`, meaning we can't access `vec0` anymore.
+Коли вперше запускаєте цю вправу, ви помітите помилку про
+"borrow of moved value". У Rust, коли аргумент передається функції і
+він явно не повертається, ви більше не можете використовувати оригінальну змінну.
+Ми називаємо це "переміщенням" (moving) змінної. Коли ми передаємо `vec0` у `fill_vec`, воно
+"переміщується" в `vec1`, що означає, що ми більше не можемо отримувати доступ до `vec0`.
 
-You could make another, separate version of the data that's in `vec0` and
-pass it to `fill_vec` instead. This is called cloning in Rust."""
+Ви могли б зробити іншу, окрему версію даних, що знаходяться в `vec0`, і
+передати її в `fill_vec` замість цього. Це називається клонуванням (cloning) у Rust."""
 
 [[exercises]]
 name = "move_semantics3"
 dir = "06_move_semantics"
 hint = """
-The difference between this one and the previous ones is that the first line
-of `fn fill_vec` that had `let mut vec = vec;` is no longer there. You can,
-instead of adding that line back, add `mut` in one place that will change
-an existing binding to be a mutable binding instead of an immutable one :)"""
+Різниця між цим і попередніми полягає в тому, що перший рядок
+`fn fill_vec`, який мав `let mut vec = vec;`, більше не там. Ви можете,
+замість додавання того рядка назад, додати `mut` в одному місці, яке змінить
+існуюче прив'язування з незмінюваного на змінюване :)"""
 
 [[exercises]]
 name = "move_semantics4"
 dir = "06_move_semantics"
 hint = """
-Carefully reason about the range in which each mutable reference is in
-scope. Does it help to update the value of `x` immediately after
-the mutable reference is taken?
-Read more about 'Mutable References' in the book's section 'References and
-Borrowing':
+Уважно обміркуйте діапазон, в якому кожне змінюване посилання (mutable reference) знаходиться в
+області видимості. Чи допомагає оновити значення `x` відразу після
+взяття змінюваного посилання?
+Прочитайте більше про 'Змінювані посилання' в розділі книги 'Посилання та
+Запозичення':
 https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#mutable-references."""
 
 [[exercises]]
@@ -385,15 +384,15 @@ name = "move_semantics5"
 dir = "06_move_semantics"
 test = false
 hint = """
-To find the answer, you can consult the book section "References and Borrowing":
+Щоб знайти відповідь, ви можете звернутися до розділу книги "Посилання та запозичення":
 https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
 
-The first problem is that `get_char` is taking ownership of the string. So
-`data` is moved and can't be used for `string_uppercase`. `data` is moved to
-`get_char` first, meaning that `string_uppercase` can't manipulate the data.
+Перша проблема полягає в тому, що `get_char` бере володіння (ownership) рядка. Отже,
+`data` переміщується і не може використовуватися для `string_uppercase`. `data` переміщується до
+`get_char` спочатку, що означає, що `string_uppercase` не може маніпулювати даними.
 
-Once you've fixed that, `string_uppercase`'s function signature will also need
-to be adjusted."""
+Як тільки ви це виправите, сигнатуру функції `string_uppercase` також потрібно буде
+скоригувати."""
 
 # STRUCTS
 
@@ -401,42 +400,42 @@ to be adjusted."""
 name = "structs1"
 dir = "07_structs"
 hint = """
-Rust has more than one type of struct. Three actually, all variants are used to
-package related data together.
+Rust має більше ніж один тип структури (struct). Насправді три, всі варіанти використовуються для
+упакування пов'язаних даних разом.
 
-There are regular structs. These are named collections of related data stored in
-fields.
+Є звичайні структури. Це іменовані колекції пов'язаних даних, що зберігаються в
+полях.
 
-Tuple structs are basically just named tuples.
+Структурні набори (Tuple structs) — це в основному просто іменовані набори.
 
-Finally, unit structs. These don't have any fields and are useful for generics.
+Нарешті, одиничні структури (unit structs). Вони не мають жодних полів і корисні для дженериків.
 
-In this exercise, you need to complete and implement one of each kind.
-Read more about structs in The Book:
+У цій вправі вам потрібно завершити та реалізувати по одному з кожного виду.
+Прочитайте більше про структури в Книзі:
 https://doc.rust-lang.org/book/ch05-01-defining-structs.html"""
 
 [[exercises]]
 name = "structs2"
 dir = "07_structs"
 hint = """
-Creating instances of structs is easy, all you need to do is assign some values
-to its fields.
+Створення екземплярів структур просте, все, що вам потрібно зробити, це присвоїти деякі значення
+їх полям.
 
-There are however some shortcuts that can be taken when instantiating structs.
-Have a look in The Book to find out more:
+Однак є деякі скорочення, які можна використати при створенні екземплярів структур.
+Подивіться в Книзі, щоб дізнатися більше:
 https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax"""
 
 [[exercises]]
 name = "structs3"
 dir = "07_structs"
 hint = """
-For `is_international`: What makes a package international? Seems related to
-the places it goes through right?
+Для `is_international`: Що робить пакет міжнародним? Здається, це пов'язано з
+місцями, через які він проходить, правильно?
 
-For `get_fees`: This method takes an additional argument, is there a field in
-the `Package` struct that this relates to?
+Для `get_fees`: Цей метод приймає додатковий аргумент, чи є поле в
+структурі `Package`, до якого це стосується?
 
-Have a look in The Book to find out more about method implementations:
+Подивіться в Книзі, щоб дізнатися більше про реалізацію методів:
 https://doc.rust-lang.org/book/ch05-03-method-syntax.html"""
 
 # ENUMS
@@ -445,26 +444,26 @@ https://doc.rust-lang.org/book/ch05-03-method-syntax.html"""
 name = "enums1"
 dir = "08_enums"
 test = false
-hint = "No hints this time ;)"
+hint = "Цього разу без підказок ;)"
 
 [[exercises]]
 name = "enums2"
 dir = "08_enums"
 test = false
 hint = """
-You can create enumerations that have different variants with different types
-such as anonymous structs, structs, a single string, tuples, no data, etc."""
+Ви можете створювати перерахування (enumerations), які мають різні варіанти з різними типами,
+такими як анонімні структури, звичайні структури, один рядок, набори, зовсім без даних тощо."""
 
 [[exercises]]
 name = "enums3"
 dir = "08_enums"
 hint = """
-As a first step, define enums to compile the code without errors.
+Як перший крок, визначте enum'и для компіляції коду без помилок.
 
-Then, create a match expression in `process()`.
+Потім створіть вираз match у `process()`.
 
-Note that you need to deconstruct some message variants in the match expression
-to get the variant's values."""
+Зауважте, що вам потрібно деконструювати деякі варіанти повідомлень у виразі match,
+щоб отримати значення варіанта."""
 
 # STRINGS
 
@@ -473,42 +472,40 @@ name = "strings1"
 dir = "09_strings"
 test = false
 hint = """
-The `current_favorite_color` function is currently returning a string slice
-with the `'static` lifetime. We know this because the data of the string lives
-in our code itself -- it doesn't come from a file or user input or another
-program -- so it will live as long as our program lives.
+Функція `current_favorite_color` наразі повертає рядковий зріз (string slice)
+з часом життя `'static`. Ми це знаємо, тому що дані рядка живуть
+у нашому коді — вони не походять з файлу чи введення користувача чи іншої
+програми — тому вони житимуть стільки, скільки живе наша програма.
 
-But it is still a string slice. There's one way to create a `String` by
-converting a string slice covered in the Strings chapter of the book, and
-another way that uses the `From` trait."""
+Але це все ще рядковий зріз. Є один спосіб створити `String`, перетворивши рядковий зріз, описаний у розділі Strings книги, і
+інший спосіб, який використовує трейт `From`."""
 
 [[exercises]]
 name = "strings2"
 dir = "09_strings"
 test = false
 hint = """
-Yes, it would be really easy to fix this by just changing the value bound to
-`word` to be a string slice instead of a `String`, wouldn't it? There is a way
-to add one character to the `if` statement, though, that will coerce the
-`String` into a string slice.
+Так, було б дуже легко виправити це, просто змінивши значення, прив'язане до
+`word`, щоб воно було рядковим зрізом замість `String`, чи не так? Є спосіб
+додати один символ до інструкції `if`, який приведе
+`String` до рядкового зрізу.
 
-Side note: If you're interested in learning about how this kind of reference
-conversion works, you can jump ahead in the book and read this part in the
-smart pointers chapter:
+Примітка: Якщо вас цікавить, як працює такий тип перетворення посилань,
+ви можете перейти вперед у книзі та прочитати цю частину в розділі про розумні покажчики:
 https://doc.rust-lang.org/book/ch15-02-deref.html#implicit-deref-coercions-with-functions-and-methods"""
 
 [[exercises]]
 name = "strings3"
 dir = "09_strings"
 hint = """
-There are many useful standard library functions for strings. Let's try and use
-some of them:
+Є багато корисних функцій стандартної бібліотеки для рядків. Спробуймо використати
+деякі з них:
 https://doc.rust-lang.org/std/string/struct.String.html#method.trim
 
-For the `compose_me` method: You can either use the `format!` macro, or convert
-the string slice into an owned string, which you can then freely extend.
+Для методу `compose_me`: Ви можете використати макрос `format!` або перетворити
+рядковий зріз у власний рядок, який потім можете вільно розширювати.
 
-For the `replace_me` method, you can check out the `replace` method:
+Для методу `replace_me` ви можете перевірити метод `replace`:
 https://doc.rust-lang.org/std/string/struct.String.html#method.replace"""
 
 [[exercises]]
@@ -516,14 +513,13 @@ name = "strings4"
 dir = "09_strings"
 test = false
 hint = """
-Replace `placeholder` with either `string` or `string_slice` in the `main`
-function.
+Замініть `placeholder` на `string` або `string_slice` у функції `main`.
 
-Example:
+Приклад:
 `placeholder("blue");`
-should become
+має стати
 `string_slice("blue");`
-because "blue" is `&str`, not `String`."""
+тому що "blue" є `&str`, а не `String`."""
 
 # MODULES
 
@@ -532,20 +528,20 @@ name = "modules1"
 dir = "10_modules"
 test = false
 hint = """
-Everything is private in Rust by default. But there's a keyword we can use
-to make something public!"""
+Все в Rust за замовчуванням є приватним. Але є ключове слово, яке ми можемо використати,
+щоб зробити щось публічним!"""
 
 [[exercises]]
 name = "modules2"
 dir = "10_modules"
 test = false
 hint = """
-The `delicious_snacks` module is trying to present an external interface that
-is different than its internal structure (the `fruits` and `veggies` modules
-and associated constants). Complete the `use` statements to fit the uses in
-`main` and find the one keyword missing for both constants.
+Модуль `delicious_snacks` намагається представити зовнішній інтерфейс, який
+відрізняється від його внутрішньої структури (модулі `fruits` і `veggies`
+та пов'язані константи). Завершіть інструкції `use`, щоб відповідати використанню в
+`main`, і знайдіть одне ключове слово, яке відсутнє для обох констант.
 
-Learn more in The Book:
+Дізнайтеся більше в Книзі:
 https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html#re-exporting-names-with-pub-use"""
 
 [[exercises]]
@@ -553,9 +549,9 @@ name = "modules3"
 dir = "10_modules"
 test = false
 hint = """
-`UNIX_EPOCH` and `SystemTime` are declared in the `std::time` module. Add a
-`use` statement for these two to bring them into scope. You can use nested
-paths to bring these two in using only one line."""
+`UNIX_EPOCH` і `SystemTime` оголошені в модулі `std::time`. Додайте
+інструкцію `use` для цих двох, щоб ввести їх в область видимості. Ви можете використати вкладені
+шляхи, щоб ввести обидва, використовуючи лише один рядок."""
 
 # HASHMAPS
 
@@ -563,29 +559,28 @@ paths to bring these two in using only one line."""
 name = "hashmaps1"
 dir = "11_hashmaps"
 hint = """
-The number of fruits should be at least 5 and you have to put at least 3
-different types of fruits."""
+Кількість фруктів має бути принаймні 5, і ви повинні покласти принаймні 3 типи різних фруктів."""
 
 [[exercises]]
 name = "hashmaps2"
 dir = "11_hashmaps"
 hint = """
-Use the `entry()` and `or_insert()` methods of `HashMap` to achieve this.
+Використайте методи `entry()` і `or_insert()` з `HashMap` для досягнення цього.
 
-Learn more in The Book:
+Дізнайтеся більше в Книзі:
 https://doc.rust-lang.org/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value"""
 
 [[exercises]]
 name = "hashmaps3"
 dir = "11_hashmaps"
 hint = """
-Hint 1: Use the `entry()` and `or_default()` methods of `HashMap` to insert the
-        default value of `TeamScores` if a team doesn't exist in the table yet.
+Підказка 1: Використайте методи `entry()` і `or_default()` з `HashMap`, щоб вставити
+        значення за замовчуванням `TeamScores`, якщо команди ще немає в таблиці.
 
-Hint 2: If there is already an entry for a given key, the value returned by
-        `entry()` can be updated based on the existing value.
+Підказка 2: Якщо вже є запис для даного ключа, значення, повернене
+        `entry()`, може бути оновлене на основі існуючого значення.
 
-Learn more in The Book:
+Дізнайтеся більше в Книзі:
 https://doc.rust-lang.org/book/ch08-03-hash-maps.html#updating-a-value-based-on-the-old-value"""
 
 # QUIZ 2
@@ -593,7 +588,7 @@ https://doc.rust-lang.org/book/ch08-03-hash-maps.html#updating-a-value-based-on-
 [[exercises]]
 name = "quiz2"
 dir = "quizzes"
-hint = "The `+` operator can concatenate a `String` with a `&str`."
+hint = "Оператор `+` може з'єднати `String` з `&str`."
 
 # OPTIONS
 
@@ -601,38 +596,37 @@ hint = "The `+` operator can concatenate a `String` with a `&str`."
 name = "options1"
 dir = "12_options"
 hint = """
-Options can have a `Some` value, with an inner value, or a `None` value,
-without an inner value.
+Options можуть мати значення `Some` з внутрішнім значенням або значення `None`
+без внутрішнього значення.
 
-There are multiple ways to get at the inner value, you can use `unwrap`, or
-pattern match. Unwrapping is the easiest, but how do you do it safely so that
-it doesn't panic in your face later?"""
+Є кілька способів отримати внутрішнє значення, ви можете використати `unwrap` або
+зіставлення зразків (pattern match). Unwrapping найпростіший, але як зробити це безпечно, щоб
+воно не панікувало пізніше?"""
 
 [[exercises]]
 name = "options2"
 dir = "12_options"
 hint = """
-Check out:
+Перевірте:
 
 - https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html
 - https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html
 
-Remember that `Option`s can be nested in if-let and while-let statements.
+Пам'ятайте, що `Option`и можуть бути вкладені в інструкції if-let і while-let.
 
-For example: `if let Some(Some(x)) = y`
+Наприклад: `if let Some(Some(x)) = y`
 
-Also see `Option::flatten`"""
+Також дивіться `Option::flatten`"""
 
 [[exercises]]
 name = "options3"
 dir = "12_options"
 test = false
 hint = """
-The compiler says a partial move happened in the `match` statement. How can
-this be avoided? The compiler shows the correction needed.
+Компілятор каже, що відбулося часткове переміщення в інструкції `match`. Як цього
+можна уникнути? Компілятор показує необхідне виправлення.
 
-After making the correction as suggested by the compiler, read the related docs
-page:
+Після внесення виправлення, як запропоновано компілятором, прочитайте відповідну сторінку документації:
 https://doc.rust-lang.org/std/keyword.ref.html"""
 
 # ERROR HANDLING
@@ -641,29 +635,29 @@ https://doc.rust-lang.org/std/keyword.ref.html"""
 name = "errors1"
 dir = "13_error_handling"
 hint = """
-`Ok` and `Err` are the two variants of `Result`, so what the tests are saying
-is that `generate_nametag_text` should return a `Result` instead of an `Option`.
+`Ok` і `Err` — це два варіанти `Result`, тому те, що кажуть тести,
+полягає в тому, що `generate_nametag_text` має повертати `Result` замість `Option`.
 
-To make this change, you'll need to:
-  - update the return type in the function signature to be a `Result<String,
-    String>` that could be the variants `Ok(String)` and `Err(String)`
-  - change the body of the function to return `Ok(…)` where it currently
-    returns `Some(…)`
-  - change the body of the function to return `Err(error message)` where it
-    currently returns `None`"""
+Щоб зробити цю зміну, вам потрібно:
+  - оновити тип повернення в сигнатурі функції на `Result<String,
+    String>`, який може бути варіантами `Ok(String)` і `Err(String)`
+  - змінити тіло функції, щоб повертати `Ok(…)` там, де воно наразі
+    повертає `Some(…)`
+  - змінити тіло функції, щоб повертати `Err(error message)` там, де воно
+    наразі повертає `None`"""
 
 [[exercises]]
 name = "errors2"
 dir = "13_error_handling"
 hint = """
-One way to handle this is using a `match` statement on
-`item_quantity.parse::<i32>()` where the cases are `Ok(something)` and
+Один спосіб обробити це — використовувати інструкцію `match` на
+`item_quantity.parse::<i32>()`, де випадки `Ok(something)` і
 `Err(something)`.
 
-This pattern is very common in Rust, though, so there's the `?` operator that
-does pretty much what you would make that match statement do for you!
+Однак цей патерн дуже поширений у Rust, тому є оператор `?`, який
+робить майже те, що ви б зробили з тією інструкцією match!
 
-Take a look at this section of the "Error Handling" chapter:
+Подивіться на цей розділ глави "Обробка помилок":
 https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator"""
 
 [[exercises]]
@@ -671,58 +665,58 @@ name = "errors3"
 dir = "13_error_handling"
 test = false
 hint = """
-If other functions can return a `Result`, why shouldn't `main`? It's a fairly
-common convention to return something like `Result<(), ErrorType>` from your
-`main` function.
+Якщо інші функції можуть повертати `Result`, чому не `main`? Це досить
+поширена конвенція повертати щось на кшталт `Result<(), ErrorType>` з вашої
+функції `main`.
 
-The unit type `()` is there because nothing is really needed in terms of a
-positive result."""
+Одиничний тип `()` там тому, що нічого дійсно не потрібно в плані
+позитивного результату."""
 
 [[exercises]]
 name = "errors4"
 dir = "13_error_handling"
 hint = """
-`PositiveNonzeroInteger::new` is always creating a new instance and returning
-an `Ok` result. But it should be doing some checking, returning an `Err` if
-those checks fail, and only returning an `Ok` if those checks determine that
-everything is… okay :)"""
+`PositiveNonzeroInteger::new` завжди створює новий екземпляр і повертає
+результат `Ok`. Але воно має виконувати якусь перевірку, повертаючи `Err`, якщо
+ці перевірки не вдаються, і повертаючи `Ok` лише якщо ці перевірки визначають, що
+все… гаразд :)"""
 
 [[exercises]]
 name = "errors5"
 dir = "13_error_handling"
 test = false
 hint = """
-There are two different possible `Result` types produced within the `main`
-function, which are propagated using the `?` operators. How do we declare a
-return type for the `main` function that allows both?
+Є два різних можливих типи `Result`, що виробляються в функції `main`,
+які поширюються за допомогою операторів `?`. Як оголосити тип повернення
+для функції `main`, який дозволяє обидва?
 
-Under the hood, the `?` operator calls `From::from` on the error value to
-convert it to a boxed trait object, a `Box<dyn Error>`. This boxed trait object
-is polymorphic, and since all errors implement the `Error` trait, we can capture
-lots of different errors in one `Box` object.
+Під капотом оператор `?` викликає `From::from` на значенні помилки, щоб
+перетворити його на упакований трейт-об'єкт, `Box<dyn Error>`. Цей упакований трейт-об'єкт
+є поліморфним, і оскільки всі помилки реалізують трейт `Error`, ми можемо захопити
+багато різних помилок в одному об'єкті `Box`.
 
-Check out this section of The Book:
+Перевірте цей розділ Книги:
 https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator
 
-Read more about boxing errors:
+Прочитайте більше про упакування помилок:
 https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html
 
-Read more about using the `?` operator with boxed errors:
+Прочитайте більше про використання оператора `?` з упакованими помилками:
 https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html"""
 
 [[exercises]]
 name = "errors6"
 dir = "13_error_handling"
 hint = """
-This exercise uses a completed version of `PositiveNonzeroInteger` from the
-previous exercises.
+Ця вправа використовує завершену версію `PositiveNonzeroInteger` з
+попередніх вправ.
 
-Below the line that `TODO` asks you to change, there is an example of using
-the `map_err()` method on a `Result` to transform one type of error into
-another. Try using something similar on the `Result` from `parse()`. You
-can then use the `?` operator to return early.
+Нижче рядка, який `TODO` просить вас змінити, є приклад використання
+методу `map_err()` на `Result` для перетворення одного типу помилки в
+інший. Спробуйте використати щось подібне на `Result` з `parse()`. Потім ви можете
+використати оператор `?` для раннього повернення.
 
-Read more about `map_err()` in the `std::result` documentation:
+Прочитайте більше про `map_err()` в документації `std::result`:
 https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err"""
 
 # Generics
@@ -732,21 +726,21 @@ name = "generics1"
 dir = "14_generics"
 test = false
 hint = """
-Vectors in Rust make use of generics to create dynamically sized arrays of any
-type.
-If the vector `numbers` has the type `Vec<T>`, then we can only push values of
-type `T` to it. By using `into()` before pushing, we ask the compiler to convert
-`n1` and `n2` to `T`. But the compiler doesn't know what `T` is yet and needs a
-type annotation.
+Вектори в Rust використовують дженерики (generics) для створення динамічно розмірних масивів будь-якого
+типу.
+Якщо вектор `numbers` має тип `Vec<T>`, то ми можемо додавати лише значення
+типу `T` до нього. Використовуючи `into()` перед додаванням, ми просимо компілятор перетворити
+`n1` і `n2` до `T`. Але компілятор ще не знає, що таке `T`, і потребує
+анотації типу.
 
-`u8` and `i8` can both be converted to `i16`, `i32` and `i64`. Choose one for
-the generic of the vector."""
+`u8` і `i8` можуть бути перетворені в `i16`, `i32` і `i64`. Виберіть один для
+дженерика вектора."""
 
 [[exercises]]
 name = "generics2"
 dir = "14_generics"
 hint = """
-Related section in The Book:
+Відповідний розділ у Книзі:
 https://doc.rust-lang.org/book/ch10-01-syntax.html#in-method-definitions"""
 
 # TRAITS
@@ -755,50 +749,50 @@ https://doc.rust-lang.org/book/ch10-01-syntax.html#in-method-definitions"""
 name = "traits1"
 dir = "15_traits"
 hint = """
-More about traits in The Book:
+Більше про трейти в Книзі:
 https://doc.rust-lang.org/book/ch10-02-traits.html
 
-The `+` operator can concatenate a `String` with a `&str`."""
+Оператор `+` може з'єднати `String` з `&str`."""
 
 [[exercises]]
 name = "traits2"
 dir = "15_traits"
 hint = """
-Notice how the trait takes ownership of `self` and returns `Self`.
+Зауважте, як трейт бере володіння `self` і повертає `Self`.
 
-Although the signature of `append_bar` in the trait takes `self` as argument,
-the implementation can take `mut self` instead. This is possible because the
-value is owned anyway."""
+Хоча сигнатура `append_bar` у трейті приймає `self` як аргумент,
+реалізація може приймати `mut self` замість цього. Це можливо, тому що
+значення все одно належить."""
 
 [[exercises]]
 name = "traits3"
 dir = "15_traits"
 hint = """
-Traits can have a default implementation for functions. Data types that
-implement the trait can then use the default version of these functions
-if they choose not to implement the function themselves.
+Трейти можуть мати реалізацію за замовчуванням для функцій. Типи даних, які
+реалізують трейт, можуть використовувати версію за замовчуванням цих функцій,
+якщо вони вирішують не реалізовувати функцію самостійно.
 
-Related section in The Book:
+Відповідний розділ у Книзі:
 https://doc.rust-lang.org/book/ch10-02-traits.html#default-implementations"""
 
 [[exercises]]
 name = "traits4"
 dir = "15_traits"
 hint = """
-Instead of using concrete types as parameters you can use traits. Try replacing
-`???` with `impl [what goes here?]`.
+Замість використання конкретних типів як параметрів ви можете використовувати трейти. Спробуйте замінити
+`???` на `impl [що тут має бути?]`.
 
-Related section in The Book:
+Відповідний розділ у Книзі:
 https://doc.rust-lang.org/book/ch10-02-traits.html#traits-as-parameters"""
 
 [[exercises]]
 name = "traits5"
 dir = "15_traits"
 hint = """
-To ensure a parameter implements multiple traits use the '+ syntax'. Try
-replacing `???` with 'impl [what goes here?] + [what goes here?]'.
+Щоб забезпечити, що параметр реалізує кілька трейтів, використайте синтаксис '+'. Спробуйте
+замінити `???` на 'impl [що тут має бути?] + [що тут має бути?]'.
 
-Related section in The Book:
+Відповідний розділ у Книзі:
 https://doc.rust-lang.org/book/ch10-02-traits.html#specifying-multiple-trait-bounds-with-the--syntax"""
 
 # QUIZ 3
@@ -807,14 +801,14 @@ https://doc.rust-lang.org/book/ch10-02-traits.html#specifying-multiple-trait-bou
 name = "quiz3"
 dir = "quizzes"
 hint = """
-To find the best solution to this challenge, you need to recall your knowledge
-of traits, specifically "Trait Bound Syntax":
+Щоб знайти найкраще рішення цього завдання, вам потрібно згадати ваші знання
+про трейти, зокрема "Синтаксис обмежень трейтів":
 https://doc.rust-lang.org/book/ch10-02-traits.html#trait-bound-syntax
 
-Here is how to specify a trait bound for an implementation block:
+Ось як вказати обмеження трейту для блоку реалізації:
 `impl<T: Trait1 + Trait2 + …> for Foo<T> { … }`
 
-You may need this:
+Вам може знадобитися це:
 `use std::fmt::Display;`"""
 
 # LIFETIMES
@@ -823,7 +817,7 @@ You may need this:
 name = "lifetimes1"
 dir = "16_lifetimes"
 hint = """
-Let the compiler guide you. Also take a look at The Book if you need help:
+Нехай компілятор вас направляє. Також подивіться на Книгу, якщо потрібна допомога:
 https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html"""
 
 [[exercises]]
@@ -831,20 +825,20 @@ name = "lifetimes2"
 dir = "16_lifetimes"
 test = false
 hint = """
-Remember that the generic lifetime `'a` will get the concrete lifetime that is
-equal to the smaller of the lifetimes of `x` and `y`.
+Пам'ятайте, що загальний час життя (generic lifetime) `'a` отримає конкретний час життя, який
+дорівнює меншому з часів життя `x` і `y`.
 
-You can take at least two paths to achieve the desired result while keeping the
-inner block:
-1. Move the `string2` declaration to make it live as long as `string1` (how is
-   `result` declared?)
-2. Move `println!` into the inner block"""
+Ви можете обрати принаймні два шляхи для досягнення бажаного результату, зберігаючи
+внутрішній блок:
+1. Перемістити оголошення `string2`, щоб воно жило так довго, як `string1` (як
+   оголошено `result`?)
+2. Перемістити `println!` у внутрішній блок"""
 
 [[exercises]]
 name = "lifetimes3"
 dir = "16_lifetimes"
 test = false
-hint = """Let the compiler guide you :)"""
+hint = """Нехай компілятор вас направляє :)"""
 
 # TESTS
 
@@ -852,33 +846,33 @@ hint = """Let the compiler guide you :)"""
 name = "tests1"
 dir = "17_tests"
 hint = """
-`assert!` is a macro that needs an argument. Depending on the value of the
-argument, `assert!` will do nothing (in which case the test will pass) or
-`assert!` will panic (in which case the test will fail).
+`assert!` — це макрос, який потребує аргумент. Залежно від значення
+аргументу, `assert!` нічого не робитиме (у цьому випадку тест пройде) або
+`assert!` запанікує (у цьому випадку тест не пройде).
 
-So try giving different values to `assert!` and see which ones compile, which
-ones pass, and which ones fail :)
+Тому спробуйте дати різні значення `assert!` і подивіться, які компілюються, які
+проходять, а які не проходять :)
 
-If you want to check for `false`, you can negate the result of what you're
-checking using `!`, like `assert!(!…)`."""
+Якщо ви хочете перевірити на `false`, ви можете заперечити результат того, що ви
+перевіряєте, використовуючи `!`, наприклад `assert!(!…)`."""
 
 [[exercises]]
 name = "tests2"
 dir = "17_tests"
 hint = """
-`assert_eq!` is a macro that takes two arguments and compares them. Try giving
-it two values that are equal! Try giving it two arguments that are different!
-Try switching which argument comes first and which comes second!"""
+`assert_eq!` — це макрос, який приймає два аргументи і порівнює їх. Спробуйте дати
+йому два значення, які рівні! Спробуйте дати йому два аргументи, які різні!
+Спробуйте поміняти місцями, який аргумент йде першим, а який другим!"""
 
 [[exercises]]
 name = "tests3"
 dir = "17_tests"
 hint = """
-We expect the method `Rectangle::new` to panic for negative values.
+Ми очікуємо, що метод `Rectangle::new` запанікує для від'ємних значень.
 
-To handle that, you need to add a special attribute to the test function.
+Щоб обробити це, вам потрібно додати спеціальний атрибут до тестової функції.
 
-You can refer to the docs:
+Ви можете звернутися до документації:
 https://doc.rust-lang.org/book/ch11-01-writing-tests.html#checking-for-panics-with-should_panic"""
 
 # STANDARD LIBRARY TYPES
@@ -887,8 +881,8 @@ https://doc.rust-lang.org/book/ch11-01-writing-tests.html#checking-for-panics-wi
 name = "iterators1"
 dir = "18_iterators"
 hint = """
-An iterator goes through all elements in a collection, but what if we've run
-out of elements? What should we expect here? If you're stuck, take a look at
+Ітератор (iterator) проходить через всі елементи в колекції, але що, якщо у нас закінчилися
+елементи? Чого ми маємо очікувати тут? Якщо ви застрягли, подивіться на
 https://doc.rust-lang.org/std/iter/trait.Iterator.html"""
 
 [[exercises]]
@@ -897,72 +891,72 @@ dir = "18_iterators"
 hint = """
 `capitalize_first`:
 
-The variable `first` is a `char`. It needs to be capitalized and added to the
-remaining characters in `chars` in order to return the correct `String`.
+Змінна `first` є `char`. Її потрібно перевести в верхній регістр і додати до
+решти символів у `chars`, щоб повернути правильний `String`.
 
-The remaining characters in `chars` can be viewed as a string slice using the
-`as_str` method.
+Решту символів у `chars` можна розглядати як рядковий зріз, використовуючи метод
+`as_str`.
 
-The documentation for `char` contains many useful methods.
+Документація для `char` містить багато корисних методів.
 https://doc.rust-lang.org/std/primitive.char.html
 
-Use `char::to_uppercase`. It returns an iterator that can be converted to a
+Використайте `char::to_uppercase`. Він повертає ітератор, який можна перетворити на
 `String`.
 
 `capitalize_words_vector`:
 
-Create an iterator from the slice. Transform the iterated values by applying
-the `capitalize_first` function. Remember to `collect` the iterator.
+Створіть ітератор із зрізу. Перетворіть ітеровані значення, застосувавши
+функцію `capitalize_first`. Не забудьте `collect` ітератор.
 
 `capitalize_words_string`:
 
-This is surprisingly similar to the previous solution. `collect` is very
-powerful and very general. Rust just needs to know the desired type."""
+Це дивно схоже на попереднє рішення. `collect` дуже
+потужний і дуже загальний. Rust просто потрібно знати бажаний тип."""
 
 [[exercises]]
 name = "iterators3"
 dir = "18_iterators"
 hint = """
-The `divide` function needs to return the correct error when the divisor is 0 or
-when even division is not possible.
+Функція `divide` повинна повертати правильну помилку, коли дільник дорівнює 0 або
+коли рівне ділення неможливе.
 
-The `division_results` variable needs to be collected into a collection type.
+Змінна `division_results` повинна бути зібрана в тип колекції.
 
-The `result_with_list` function needs to return a single `Result` where the
-success case is a vector of integers and the failure case is a `DivisionError`.
+Функція `result_with_list` повинна повертати єдиний `Result`, де
+випадок успіху — це вектор цілих чисел, а випадок невдачі — це `DivisionError`.
 
-The `list_of_results` function needs to return a vector of results.
+Функція `list_of_results` повинна повертати вектор результатів.
 
-See https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect for
-how the `FromIterator` trait is used in `collect()`. This trait is REALLY
-powerful! It can make the solution to this exercise much easier."""
+Дивіться https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect для
+того, як трейт `FromIterator` використовується в `collect()`. Цей трейт ДІЙСНО
+потужний! Він може зробити рішення цієї вправи набагато простішим."""
 
 [[exercises]]
 name = "iterators4"
 dir = "18_iterators"
 hint = """
-In an imperative language, you might write a `for` loop that updates a mutable
-variable. Or, you might write code utilizing recursion and a match clause. In
-Rust, you can take another functional approach, computing the factorial
-elegantly with ranges and iterators.
+В імперативній мові ви могли б написати цикл `for`, який оновлює змінювану
+змінну. Або ви могли б написати код, що використовує рекурсію та клаузулу match. У
+Rust ви можете обрати інший функціональний підхід, обчислюючи факторіал
+елегантно з діапазонами та ітераторами.
 
-Check out the `fold` and `rfold` methods!"""
+Перевірте методи `fold` і `rfold`!"""
 
 [[exercises]]
 name = "iterators5"
 dir = "18_iterators"
 hint = """
-The documentation for the `std::iter::Iterator` trait contains numerous methods
-that would be helpful here.
+Документація для трейту `std::iter::Iterator` містить численні методи,
+які були б корисні тут.
 
-The `collection` variable in `count_collection_iterator` is a slice of
-`HashMap`s. It needs to be converted into an iterator in order to use the
-iterator methods.
+Змінна `collection` у `count_collection_iterator` — це зріз
+`HashMap`ів. Її потрібно перетворити на ітератор, щоб використовувати
+методи ітератора.
 
-The `fold` method can be useful in the `count_collection_iterator` function.
+Метод `fold` може бути корисним у функції `count_collection_iterator`.
 
-For a further challenge, consult the documentation for `Iterator` to find
-a different method that could make your code more compact than using `fold`."""
+Для додаткового виклику зверніться до документації `Iterator`, щоб знайти
+інший метод, який міг би зробити ваш код більш компактним, ніж використання `fold`."""
 
 # SMART POINTERS
 
@@ -970,61 +964,58 @@ a different method that could make your code more compact than using `fold`."""
 name = "box1"
 dir = "19_smart_pointers"
 hint = """
-The compiler's message should help: Since we cannot store the value of the
-actual type when working with recursive types, we need to store a reference
-(pointer) to its value.
+Повідомлення компілятора має допомогти: Оскільки ми не можемо зберігати значення
+фактичного типу при роботі з рекурсивними типами, нам потрібно зберігати посилання
+(покажчик) на його значення.
 
-We should, therefore, place our `List` inside a `Box`. More details in The Book:
+Тому ми маємо помістити наш `List` всередину `Box`. Більше деталей у Книзі:
 https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes
 
-Creating an empty list should be fairly straightforward (Hint: Read the tests).
+Створення порожнього списку має бути досить простим (Підказка: Прочитайте тести).
 
-For a non-empty list, keep in mind that we want to use our `Cons` list builder.
-Although the current list is one of integers (`i32`), feel free to change the
-definition and try other types!"""
+Для непорожнього списку пам'ятайте, що ми хочемо використовувати наш конструктор списку `Cons`.
+Хоча поточний список складається з цілих чисел (`i32`), не соромтеся змінити
+визначення та спробувати інші типи!"""
 
 [[exercises]]
 name = "rc1"
 dir = "19_smart_pointers"
 hint = """
-This is a straightforward exercise to use the `Rc<T>` type. Each `Planet` has
-ownership of the `Sun`, and uses `Rc::clone()` to increment the reference count
-of the `Sun`.
+Це проста вправа для використання типу `Rc<T>`. Кожна `Planet` має
+володіння `Sun` і використовує `Rc::clone()` для збільшення лічильника посилань
+`Sun`.
 
-After using `drop()` to move the `Planet`s out of scope individually, the
-reference count goes down.
+Після використання `drop()` для виведення `Planet`ів з області видимості окремо,
+лічильник посилань зменшується.
 
-In the end, the `Sun` only has one reference again, to itself.
+Зрештою, `Sun` має лише одне посилання, на себе.
 
-See more at: https://doc.rust-lang.org/book/ch15-04-rc.html
+Дивіться більше на: https://doc.rust-lang.org/book/ch15-04-rc.html
 
-Unfortunately, Pluto is no longer considered a planet :("""
+На жаль, Плутон більше не вважається планетою :("""
 
 [[exercises]]
 name = "arc1"
 dir = "19_smart_pointers"
 test = false
 hint = """
-Make `shared_numbers` be an `Arc` from the `numbers` vector. Then, in order
-to avoid creating a copy of `numbers`, you'll need to create `child_numbers`
-inside the loop but still in the main thread.
+Зробіть `shared_numbers` `Arc` з вектора `numbers`. Тоді, щоб
+уникнути створення копії `numbers`, вам потрібно буде створити `child_numbers`
+всередині циклу, але все ще в основному потоці.
 
-`child_numbers` should be a clone of the `Arc` of the numbers instead of a
-thread-local copy of the numbers.
+`child_numbers` має бути клоном `Arc` чисел замість локальної копії чисел у потоці.
 
-This is a simple exercise if you understand the underlying concepts, but if this
-is too much of a struggle, consider reading through all of Chapter 16 in The
-Book:
+Це проста вправа, якщо ви розумієте основні концепції, але якщо це
+занадто складно, розгляньте прочитання всього розділу 16 у Книзі:
 https://doc.rust-lang.org/book/ch16-00-concurrency.html"""
 
 [[exercises]]
 name = "cow1"
 dir = "19_smart_pointers"
 hint = """
-If `Cow` already owns the data, it doesn't need to clone it when `to_mut()` is
-called.
+Якщо `Cow` вже володіє даними, йому не потрібно клонувати їх, коли викликається `to_mut()`.
 
-Check out the documentation of the `Cow` type:
+Перевірте документацію типу `Cow`:
 https://doc.rust-lang.org/std/borrow/enum.Cow.html"""
 
 # THREADS
@@ -1034,15 +1025,15 @@ name = "threads1"
 dir = "20_threads"
 test = false
 hint = """
-`JoinHandle` is a struct that is returned from a spawned thread:
+`JoinHandle` — це структура, яка повертається зі створеного потоку:
 https://doc.rust-lang.org/std/thread/fn.spawn.html
 
-A challenge with multi-threaded applications is that the main thread can
-finish before the spawned threads are done.
+Виклик у багатопотокових додатках полягає в тому, що основний потік може
+завершитися до того, як створені потоки закінчать роботу.
 https://doc.rust-lang.org/book/ch16-01-threads.html#waiting-for-all-threads-to-finish-using-join-handles
 
-Use the `JoinHandle`s to wait for each thread to finish and collect their
-results.
+Використайте `JoinHandle`и, щоб дочекатися завершення кожного потоку та зібрати їх
+результати.
 
 https://doc.rust-lang.org/std/thread/struct.JoinHandle.html"""
 
@@ -1051,36 +1042,36 @@ name = "threads2"
 dir = "20_threads"
 test = false
 hint = """
-`Arc` is an Atomic Reference Counted pointer that allows safe, shared access
-to **immutable** data. But we want to *change* the number of `jobs_done` so
-we'll need to also use another type that will only allow one thread to mutate
-the data at a time. Take a look at this section of the book:
+`Arc` — це атомний лічильник посилань (Atomic Reference Counted), який дозволяє безпечний, спільний доступ
+до **незмінюваних** даних. Але ми хочемо *змінити* кількість `jobs_done`, тому
+нам потрібно також використати інший тип, який дозволить лише одному потоку змінювати
+дані одночасно. Подивіться на цей розділ книги:
 https://doc.rust-lang.org/book/ch16-03-shared-state.html#atomic-reference-counting-with-arct
 
-Keep reading if you'd like more hints :)
+Продовжуйте читати, якщо хочете більше підказок :)
 
-Do you now have an `Arc<Mutex<JobStatus>>` at the beginning of `main`? Like:
+Чи є у вас тепер `Arc<Mutex<JobStatus>>` на початку `main`? Наприклад:
 ```
 let status = Arc::new(Mutex::new(JobStatus { jobs_done: 0 }));
 ```
 
-Similar to the code in the following example in The Book:
+Подібно до коду в наступному прикладі в Книзі:
 https://doc.rust-lang.org/book/ch16-03-shared-state.html#sharing-a-mutext-between-multiple-threads"""
 
 [[exercises]]
 name = "threads3"
 dir = "20_threads"
 hint = """
-An alternate way to handle concurrency between threads is to use an `mpsc`
-(multiple producer, single consumer) channel to communicate.
+Альтернативний спосіб обробки одночасності між потоками — використання каналу `mpsc`
+(кілька виробників, один споживач) для спілкування.
 
-With both a sending end and a receiving end, it's possible to send values in
-one thread and receive them in another.
+З відправним і приймальним кінцем можна відправляти значення в
+одному потоці та отримувати їх в іншому.
 
-Multiple producers are possible by using `clone()` to create a duplicate of the
-original sending end.
+Кілька виробників можливі за допомогою `clone()` для створення дубліката
+оригінального відправного кінця.
 
-Related section in The Book:
+Відповідний розділ у Книзі:
 https://doc.rust-lang.org/book/ch16-02-message-passing.html"""
 
 # MACROS
@@ -1090,41 +1081,41 @@ name = "macros1"
 dir = "21_macros"
 test = false
 hint = """
-When you call a macro, you need to add something special compared to a regular
-function call."""
+Коли ви викликаєте макрос, вам потрібно додати щось особливе порівняно із звичайним
+викликом функції."""
 
 [[exercises]]
 name = "macros2"
 dir = "21_macros"
 test = false
 hint = """
-Macros don't quite play by the same rules as the rest of Rust, in terms of
-what's available where.
+Макроси не зовсім грають за тими самими правилами, що й решта Rust, з точки зору
+того, що доступно де.
 
-Unlike other things in Rust, the order of "where you define a macro" versus
-"where you use it" actually matters."""
+На відміну від інших речей у Rust, порядок "де ви визначаєте макрос" проти
+"де ви його використовуєте" насправді має значення."""
 
 [[exercises]]
 name = "macros3"
 dir = "21_macros"
 test = false
 hint = """
-In order to use a macro outside of its module, you need to do something
-special to the module to lift the macro out into its parent."""
+Щоб використовувати макрос поза його модулем, вам потрібно зробити щось
+особливе з модулем, щоб підняти макрос у його батьківський модуль."""
 
 [[exercises]]
 name = "macros4"
 dir = "21_macros"
 test = false
 hint = """
-You only need to add a single character to make this compile.
+Вам потрібно лише додати один символ, щоб це скомпілювалося.
 
-The way macros are written, it wants to see something between each "macro arm",
-so it can separate them.
+Спосіб написання макросів такий, що він хоче бачити щось між кожною "гілкою макроса",
+щоб він міг їх розділити.
 
-That's all the macro exercises we have in here, but it's barely even scratching
-the surface of what you can do with Rust's macros. For a more thorough
-introduction, you can have a read through 'The Little Book of Rust Macros':
+Це всі вправи з макросів, які у нас є, але це ледве торкається
+поверхні того, що ви можете робити з макросами Rust. Для більш ґрунтовного
+введення ви можете прочитати 'The Little Book of Rust Macros':
 https://veykril.github.io/tlborm/"""
 
 #  CLIPPY
@@ -1135,16 +1126,16 @@ dir = "22_clippy"
 test = false
 strict_clippy = true
 hint = """
-Rust stores the highest precision version of some long or infinite precision
-mathematical constants in the Rust standard library:
+Rust зберігає версії найвищої точності деяких довгих або нескінченно точних
+математичних констант у стандартній бібліотеці Rust:
 https://doc.rust-lang.org/stable/std/f32/consts/index.html
 
-We may be tempted to use our own approximations for certain mathematical
-constants, but clippy recognizes those imprecise mathematical constants as a
-source of potential error.
+Ми можемо спокуситися використовувати наші власні наближення для певних математичних
+констант, але clippy розпізнає ці неточні математичні константи як джерело
+потенційної помилки.
 
-See the suggestions of the Clippy warning in the compile output and use the
-appropriate replacement constant from `std::f32::consts`."""
+Дивіться пропозиції попередження Clippy у виході компіляції та використайте
+відповідну константу заміни з `std::f32::consts`."""
 
 [[exercises]]
 name = "clippy2"
@@ -1152,11 +1143,10 @@ dir = "22_clippy"
 test = false
 strict_clippy = true
 hint = """
-`for` loops over `Option` values are more clearly expressed as an `if-let`
-statement.
+Цикли `for` над значеннями `Option` більш чітко виражені як інструкція `if-let`.
 
-Not required to solve this exercise, but if you are interested in when iterating
-over `Option` can be useful, read the following section in the documentation:
+Не обов'язково для розв'язання цієї вправи, але якщо вас цікавить, коли ітерація
+над `Option` може бути корисною, прочитайте наступний розділ у документації:
 https://doc.rust-lang.org/std/option/#iterating-over-option"""
 
 [[exercises]]
@@ -1164,7 +1154,7 @@ name = "clippy3"
 dir = "22_clippy"
 test = false
 strict_clippy = true
-hint = "No hints this time!"
+hint = "Цього разу без підказок!"
 
 # TYPE CONVERSIONS
 
@@ -1172,45 +1162,44 @@ hint = "No hints this time!"
 name = "using_as"
 dir = "23_conversions"
 hint = """
-Use the `as` operator to cast one of the operands in the last line of the
-`average` function into the expected return type."""
+Використайте оператор `as` для приведення одного з операндів в останньому рядку
+функції `average` до очікуваного типу повернення."""
 
 [[exercises]]
 name = "from_into"
 dir = "23_conversions"
 hint = """
-Follow the steps provided right before the `From` implementation."""
+Виконайте кроки, надані безпосередньо перед реалізацією `From`."""
 
 [[exercises]]
 name = "from_str"
 dir = "23_conversions"
 hint = """
-The implementation of `FromStr` should return an `Ok` with a `Person` object,
-or an `Err` with an error if the string is not valid.
+Реалізація `FromStr` має повертати `Ok` з об'єктом `Person`
+або `Err` з помилкою, якщо рядок недійсний.
 
-This is almost like the previous `from_into` exercise, but returning errors
-instead of falling back to a default value.
+Це майже як попередня вправа `from_into`, але повертає помилки
+замість повернення до значення за замовчуванням.
 
-Another hint: You can use the `map_err` method of `Result` with a function or a
-closure to wrap the error from `parse::<u8>`.
+Ще одна підказка: Ви можете використати метод `map_err` з `Result` з функцією або
+замиканням для обгортання помилки з `parse::<u8>`.
 
-Yet another hint: If you would like to propagate errors by using the `?`
-operator in your solution, you might want to look at
+Ще одна підказка: Якщо ви хочете поширювати помилки за допомогою оператора `?`
+у вашому рішенні, ви можете захотіти подивитися на
 https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html"""
 
 [[exercises]]
 name = "try_from_into"
 dir = "23_conversions"
 hint = """
-Is there an implementation of `TryFrom` in the standard library that can both do
-the required integer conversion and check the range of the input?
+Чи є реалізація `TryFrom` у стандартній бібліотеці, яка може як виконати
+необхідне перетворення цілого числа, так і перевірити діапазон вхідних даних?
 
-Challenge: Can you make the `TryFrom` implementations generic over many integer
-types?"""
+Виклик: Чи можете ви зробити реалізації `TryFrom` загальними для багатьох типів
+цілих чисел?"""
 
 [[exercises]]
 name = "as_ref_mut"
 dir = "23_conversions"
 hint = """
-Add `AsRef<str>` or `AsMut<u32>` as a trait bound to the functions."""
-
+Додайте `AsRef<str>` або `AsMut<u32>` як обмеження трейту до функцій."""
