@@ -1,0 +1,52 @@
+# The format version is an indicator of the compatibility of community exercises with the
+# Rustlings program.
+# The format version is not the same as the version of the Rustlings program.
+# In case Rustlings makes an unavoidable breaking change to the expected format of community
+# exercises, you would need to raise this version and adapt to the new format.
+# Otherwise, the newest version of the Rustlings program won't be able to run these exercises.
+format_version = 1
+
+welcome_message = """
+Це твій перший раз? Не хвилюйся, Rustlings створено для початківців!
+Ми навчимо тебе багато чого про Rust, але перш ніж почати,
+ось декілька зауважень про те, як працює Rustlings:
+
+1. Центральна концепція Rustlings полягає в тому, що ти розв'язуєш вправи. Ці
+   вправи зазвичай містять помилки компілятора або логічні помилки, які призводять до
+   невдалої компіляції чи тестування. Твоє завдання - знайти всі помилки
+   та виправити їх!
+2. Переконайся, що твій редактор відкрито в директорії `rustlings/`. Rustlings
+   покаже тобі шлях до поточної вправи під індикатором прогресу. Відкрий
+   файл вправи у своєму редакторі, виправ помилки та збережи файл. Rustlings
+   автоматично виявить зміну файлу та перезапустить вправу. Якщо всі
+   помилки виправлено, Rustlings запропонує тобі перейти до наступної вправи.
+3. Якщо ти застряг на вправі, введи `h`, щоб показати підказку.
+4. Якщо вправа тобі незрозуміла, сміливо створюй issue на
+   GitHub! (https://github.com/rust-lang/rustlings). Ми переглядаємо кожне issue, і
+   іноді інші учні теж це роблять, тож ти можеш допомагати один одному!"""
+
+final_message = """
+Сподіваємося, тобі сподобалося вивчати різні аспекти Rust!
+Якщо ти помітив будь-які проблеми, не соромся повідомити про них на Github.
+Ти також можеш внести свої власні вправи, щоб допомогти спільноті!
+
+Перед повідомленням про проблему або внесенням змін, будь ласка, прочитай наші рекомендації:
+https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md"""
+
+# Repeat this section for every exercise.
+[[exercises]]
+name = "intro1"
+dir = "00_intro"
+test = false
+skip_check_unsolved = true
+hint = """
+Натисніть `n`, щоб перейти до наступної вправи.
+"""
+
+[[exercises]]
+name = "intro2"
+dir = "00_intro"
+test = false
+hint = """
+Компілятор підказує, що макрос написано неправильно.
+Він також пропонує альтернативу."""
