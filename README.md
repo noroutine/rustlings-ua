@@ -153,5 +153,5 @@ rustlings
 
 ### Поточний прогрес
 
-Слідкуйте за прогресом перекладу в [Issues](../../issues) або у файлі CONTRIBUTION_GUIDELINES.md.
+Слідкуйте за прогресом перекладу в [Issues](../../issues).
 

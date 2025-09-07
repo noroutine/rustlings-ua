@@ -7,6 +7,6 @@ fn main() {
     // Нова змінна "затіняє" попередню, і тепер ім'я посилається на нове значення.
     // Затінення також може змінювати тип змінної.
     // https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
-    let number = 3;
+    let number = 8;
     println!("Число плюс два дорівнює: {}", number + 2);
 }
