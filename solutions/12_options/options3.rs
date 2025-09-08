@@ -7,20 +7,20 @@ struct Point {
 fn main() {
     let optional_point = Some(Point { x: 100, y: 200 });
 
-    // Solution 1: Matching over the `Option` (not `&Option`) but without moving
-    // out of the `Some` variant.
+    // Рішення 1: Зіставлення з `Option` (не `&Option`), але без переміщення
+    // з варіанта `Some`.
     match optional_point {
-        Some(ref p) => println!("Coordinates are {},{}", p.x, p.y),
-        //   ^^^ added
-        _ => panic!("No match!"),
+        Some(ref p) => println!("Координати: {},{}", p.x, p.y),
+        //   ^^^ додано
+        _ => panic!("Немає відповідності!"),
     }
 
-    // Solution 2: Matching over a reference (`&Option`) by added `&` before
+    // Рішення 2: Зіставлення з посиланням (`&Option`), додавши `&` перед
     // `optional_point`.
     match &optional_point {
-        //^ added
-        Some(p) => println!("Coordinates are {},{}", p.x, p.y),
-        _ => panic!("No match!"),
+        //^ додано
+        Some(p) => println!("Координати: {},{}", p.x, p.y),
+        _ => panic!("Немає відповідності!"),
     }
 
     println!("{optional_point:?}");

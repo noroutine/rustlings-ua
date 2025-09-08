@@ -1,12 +1,12 @@
-# Hashmaps
+# Хеш-мапи (Hashmaps)
 
-A *hash map* allows you to associate a value with a particular key.
-You may also know this by the names [*unordered map* in C++](https://en.cppreference.com/w/cpp/container/unordered_map),
-[*dictionary* in Python](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) or an *associative array* in other languages.
+*Хеш-мапа* (hash map) дозволяє вам асоціювати значення з конкретним ключем.
+Ви можете також знати цю структуру під назвами [*unordered map* в C++](https://en.cppreference.com/w/cpp/container/unordered_map),
+[*dictionary* в Python](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) або *асоціативний масив* в інших мовах.
 
-This is the other data structure that we've been talking about before, when
-talking about Vecs.
+Це інша структура даних, про яку ми говорили раніше, коли
+обговорювали вектори.
 
-## Further information
+## Додаткова інформація
 
-- [Storing Keys with Associated Values in Hash Maps](https://doc.rust-lang.org/book/ch08-03-hash-maps.html)
+- [Зберігання ключів з асоційованими значеннями у хеш-мапах (Hash Maps)](https://doc.rust-lang.org/book/ch08-03-hash-maps.html)

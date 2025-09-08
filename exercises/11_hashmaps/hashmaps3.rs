@@ -1,14 +1,14 @@
-// A list of scores (one per line) of a soccer match is given. Each line is of
-// the form "<team_1_name>,<team_2_name>,<team_1_goals>,<team_2_goals>"
-// Example: "England,France,4,2" (England scored 4 goals, France 2).
+// Надано список рахунків (один на рядок) футбольного матчу. Кожен рядок має форму
+// "<назва_команди_1>,<назва_команди_2>,<голи_команди_1>,<голи_команди_2>"
+// Приклад: "Англія,Франція,4,2" (Англія забила 4 голи, Франція 2).
 //
-// You have to build a scores table containing the name of the team, the total
-// number of goals the team scored, and the total number of goals the team
-// conceded.
+// Ви повинні побудувати таблицю рахунків, що містить назву команди, загальну
+// кількість голів, які забила команда, і загальну кількість голів,
+// які пропустила команда.
 
 use std::collections::HashMap;
 
-// A structure to store the goal details of a team.
+// Структура для зберігання деталей голів команди.
 #[derive(Default)]
 struct TeamScores {
     goals_scored: u8,
@@ -16,45 +16,45 @@ struct TeamScores {
 }
 
 fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
-    // The name of the team is the key and its associated struct is the value.
+    // Назва команди є ключем, а пов’язана структура - значенням.
     let mut scores = HashMap::<&str, TeamScores>::new();
 
     for line in results.lines() {
         let mut split_iterator = line.split(',');
-        // NOTE: We use `unwrap` because we didn't deal with error handling yet.
+        // ПРИМІТКА: Ми використовуємо `unwrap`, бо ми ще не вивчали обробку помилок.
         let team_1_name = split_iterator.next().unwrap();
         let team_2_name = split_iterator.next().unwrap();
         let team_1_score: u8 = split_iterator.next().unwrap().parse().unwrap();
         let team_2_score: u8 = split_iterator.next().unwrap().parse().unwrap();
 
-        // TODO: Populate the scores table with the extracted details.
-        // Keep in mind that goals scored by team 1 will be the number of goals
-        // conceded by team 2. Similarly, goals scored by team 2 will be the
-        // number of goals conceded by team 1.
+        // TODO: Заповніть таблицю рахунків витягнутими деталями.
+        // Пам’ятайте, що голи, забиті командою 1, будуть кількістю голів,
+        // пропущених командою 2. Аналогічно, голи, забиті командою 2, будуть
+        // кількістю голів, пропущених командою 1.
     }
 
     scores
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    const RESULTS: &str = "England,France,4,2
-France,Italy,3,1
-Poland,Spain,2,0
-Germany,England,2,1
-England,Spain,1,0";
+    const RESULTS: &str = "Англія,Франція,4,2
+Франція,Італія,3,1
+Польща,Іспанія,2,0
+Німеччина,Англія,2,1
+Англія,Іспанія,1,0";
 
     #[test]
     fn build_scores() {
         let scores = build_scores_table(RESULTS);
 
-        assert!(["England", "France", "Germany", "Italy", "Poland", "Spain"]
+        assert!(["Англія", "Франція", "Німеччина", "Італія", "Польща", "Іспанія"]
             .into_iter()
             .all(|team_name| scores.contains_key(team_name)));
     }
@@ -62,7 +62,7 @@ England,Spain,1,0";
     #[test]
     fn validate_team_score_1() {
         let scores = build_scores_table(RESULTS);
-        let team = scores.get("England").unwrap();
+        let team = scores.get("Англія").unwrap();
         assert_eq!(team.goals_scored, 6);
         assert_eq!(team.goals_conceded, 4);
     }
@@ -70,7 +70,7 @@ England,Spain,1,0";
     #[test]
     fn validate_team_score_2() {
         let scores = build_scores_table(RESULTS);
-        let team = scores.get("Spain").unwrap();
+        let team = scores.get("Іспанія").unwrap();
         assert_eq!(team.goals_scored, 0);
         assert_eq!(team.goals_conceded, 3);
     }

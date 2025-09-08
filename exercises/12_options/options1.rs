@@ -1,13 +1,13 @@
-// This function returns how much ice cream there is left in the fridge.
-// If it's before 22:00 (24-hour system), then 5 scoops are left. At 22:00,
-// someone eats it all, so no ice cream is left (value 0). Return `None` if
-// `hour_of_day` is higher than 23.
+// Ця функція повертає, скільки морозива залишилося в холодильнику.
+// Якщо це до 22:00 (24-годинна система), то залишилося 5 кульок. О 22:00
+// хтось з'їдає все, тому морозива не залишається (значення 0). Поверніть `None`, якщо
+// `hour_of_day` більше за 23.
 fn maybe_ice_cream(hour_of_day: u16) -> Option<u16> {
-    // TODO: Complete the function body.
+    // TODO: Завершіть тіло функції.
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]
@@ -16,11 +16,11 @@ mod tests {
 
     #[test]
     fn raw_value() {
-        // TODO: Fix this test. How do you get the value contained in the
+        // TODO: Виправте цей тест. Як отримати значення, яке міститься в
         // Option?
         let ice_creams = maybe_ice_cream(12);
 
-        assert_eq!(ice_creams, 5); // Don't change this line.
+        assert_eq!(ice_creams, 5); // Не змінюйте цей рядок.
     }
 
     #[test]

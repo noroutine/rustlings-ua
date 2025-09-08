@@ -1,12 +1,12 @@
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]
 mod tests {
     #[test]
     fn simple_option() {
-        let target = "rustlings";
+        let target = "растівки";
         let optional_target = Some(target);
 
         // if-let
@@ -26,7 +26,7 @@ mod tests {
 
         let mut cursor = range;
 
-        // while-let with nested pattern matching
+        // while-let із вкладеним зіставленням з шаблоном
         while let Some(Some(integer)) = optional_integers.pop() {
             assert_eq!(integer, cursor);
             cursor -= 1;
