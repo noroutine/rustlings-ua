@@ -16,7 +16,7 @@ struct State {
     height: u64,
     position: Point,
     message: String,
-    // RGB color composed of red, green and blue.
+    // RGB колір, складений з червоного, зеленого та синього.
     color: (u8, u8, u8),
     quit: bool,
 }
@@ -44,13 +44,13 @@ impl State {
     }
 
     fn process(&mut self, message: Message) {
-        // TODO: Create a match expression to process the different message
-        // variants using the methods defined above.
+        // TODO: Створіть вираз match для обробки різних варіантів
+        // повідомлення, використовуючи методи, визначені вище.
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]
@@ -63,7 +63,7 @@ mod tests {
             width: 0,
             height: 0,
             position: Point { x: 0, y: 0 },
-            message: String::from("hello world"),
+            message: String::from("привіт"),
             color: (0, 0, 0),
             quit: false,
         };
@@ -73,7 +73,7 @@ mod tests {
             height: 30,
         });
         state.process(Message::Move(Point { x: 10, y: 15 }));
-        state.process(Message::Echo(String::from("Hello world!")));
+        state.process(Message::Echo(String::from("Привітулькі!")));
         state.process(Message::ChangeColor(255, 0, 255));
         state.process(Message::Quit);
 
@@ -81,7 +81,7 @@ mod tests {
         assert_eq!(state.height, 30);
         assert_eq!(state.position.x, 10);
         assert_eq!(state.position.y, 15);
-        assert_eq!(state.message, "Hello world!");
+        assert_eq!(state.message, "Привітулькі!");
         assert_eq!(state.color, (255, 0, 255));
         assert!(state.quit);
     }

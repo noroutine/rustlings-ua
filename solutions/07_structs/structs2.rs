@@ -11,7 +11,7 @@ struct Order {
 
 fn create_order_template() -> Order {
     Order {
-        name: String::from("Bob"),
+        name: String::from("Євген"),
         year: 2019,
         made_by_phone: false,
         made_by_mobile: false,
@@ -22,7 +22,7 @@ fn create_order_template() -> Order {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]
@@ -34,18 +34,19 @@ mod tests {
         let order_template = create_order_template();
 
         let your_order = Order {
-            name: String::from("Hacker in Rust"),
+            name: String::from("Краб Іржавко"),
             count: 1,
-            // Struct update syntax
+            // Синтаксис оновлення однієї структури полями іншої
             ..order_template
         };
 
-        assert_eq!(your_order.name, "Hacker in Rust");
+        assert_eq!(your_order.name, "Краб Іржавко");
         assert_eq!(your_order.year, order_template.year);
         assert_eq!(your_order.made_by_phone, order_template.made_by_phone);
         assert_eq!(your_order.made_by_mobile, order_template.made_by_mobile);
         assert_eq!(your_order.made_by_email, order_template.made_by_email);
         assert_eq!(your_order.item_number, order_template.item_number);
         assert_eq!(your_order.count, 1);
+
     }
 }

@@ -10,7 +10,7 @@ struct ColorTupleStruct(u8, u8, u8);
 struct UnitStruct;
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]

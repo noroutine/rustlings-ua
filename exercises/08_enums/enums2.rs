@@ -6,7 +6,7 @@ struct Point {
 
 #[derive(Debug)]
 enum Message {
-    // TODO: Define the different variants used below.
+    // TODO: Визначте різні варіанти (variants), що використовуються нижче.
 }
 
 impl Message {
@@ -22,7 +22,7 @@ fn main() {
             height: 30,
         },
         Message::Move(Point { x: 10, y: 15 }),
-        Message::Echo(String::from("hello world")),
+        Message::Echo(String::from("Привітулькі")),
         Message::ChangeColor(200, 255, 255),
         Message::Quit,
     ];

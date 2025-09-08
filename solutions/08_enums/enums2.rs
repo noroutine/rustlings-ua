@@ -26,7 +26,7 @@ fn main() {
             height: 30,
         },
         Message::Move(Point { x: 10, y: 15 }),
-        Message::Echo(String::from("hello world")),
+        Message::Echo(String::from("Привітулькі")),
         Message::ChangeColor(200, 255, 255),
         Message::Quit,
     ];

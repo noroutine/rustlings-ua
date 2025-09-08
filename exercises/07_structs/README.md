@@ -1,8 +1,8 @@
-# Structs
+# Структури (Structs)
 
-Rust has three struct types: a classic C struct, a tuple struct, and a unit struct.
+Rust має три типи структур (structs): класичну C структуру, структуру-кортеж (tuple struct) та одиничну структуру (unit struct).
 
-## Further information
+## Додаткова інформація
 
-- [Structures](https://doc.rust-lang.org/book/ch05-01-defining-structs.html)
-- [Method Syntax](https://doc.rust-lang.org/book/ch05-03-method-syntax.html)
+- [Структури (Structures)](https://doc.rust-lang.org/book/ch05-01-defining-structs.html)
+- [Синтаксис методів (Method Syntax)](https://doc.rust-lang.org/book/ch05-03-method-syntax.html)

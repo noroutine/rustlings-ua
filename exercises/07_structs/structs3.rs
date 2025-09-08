@@ -1,5 +1,5 @@
-// Structs contain data, but can also have logic. In this exercise, we have
-// defined the `Package` struct, and we want to test some logic attached to it.
+// Структури (structs) містять дані, але також можуть мати логіку. У цій вправі ми
+// визначили структуру `Package` і хочемо протестувати деяку логіку, пов'язану з нею.
 
 #[derive(Debug)]
 struct Package {
@@ -11,9 +11,9 @@ struct Package {
 impl Package {
     fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Self {
         if weight_in_grams < 10 {
-            // This isn't how you should handle errors in Rust, but we will
-            // learn about error handling later.
-            panic!("Can't ship a package with weight below 10 grams");
+            // В Rust обробляти помилки потрібно по-іншому, але ми
+            // вивчимо обробку помилок пізніше.
+            panic!("Неможливо відправити пакунок вагою менше 10 грамів");
         }
 
         Self {
@@ -23,20 +23,20 @@ impl Package {
         }
     }
 
-    // TODO: Add the correct return type to the function signature.
+    // TODO: Додайте правильний тип повернення до сигнатури функції.
     fn is_international(&self) {
-        // TODO: Read the tests that use this method to find out when a package
-        // is considered international.
+        // TODO: Прочитайте тести, які використовують цей метод, щоб дізнатися, коли пакунок
+        // вважається міжнародним.
     }
 
-    // TODO: Add the correct return type to the function signature.
+    // TODO: Додайте правильний тип повернення до сигнатури функції.
     fn get_fees(&self, cents_per_gram: u32) {
-        // TODO: Calculate the package's fees.
+        // TODO: Обчисліть плату за пакунок.
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]
@@ -46,16 +46,16 @@ mod tests {
     #[test]
     #[should_panic]
     fn fail_creating_weightless_package() {
-        let sender_country = String::from("Spain");
-        let recipient_country = String::from("Austria");
+        let sender_country = String::from("Іспанія");
+        let recipient_country = String::from("Австрія");
 
         Package::new(sender_country, recipient_country, 5);
     }
 
     #[test]
     fn create_international_package() {
-        let sender_country = String::from("Spain");
-        let recipient_country = String::from("Russia");
+        let sender_country = String::from("Іспанія");
+        let recipient_country = String::from("Україна");
 
         let package = Package::new(sender_country, recipient_country, 1200);
 
@@ -64,7 +64,7 @@ mod tests {
 
     #[test]
     fn create_local_package() {
-        let sender_country = String::from("Canada");
+        let sender_country = String::from("Канада");
         let recipient_country = sender_country.clone();
 
         let package = Package::new(sender_country, recipient_country, 1200);
@@ -74,8 +74,8 @@ mod tests {
 
     #[test]
     fn calculate_transport_fees() {
-        let sender_country = String::from("Spain");
-        let recipient_country = String::from("Spain");
+        let sender_country = String::from("Україна");
+        let recipient_country = String::from("Україна");
 
         let cents_per_gram = 3;
 
