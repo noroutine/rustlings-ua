@@ -3,18 +3,18 @@ fn trim_me(input: &str) -> &str {
 }
 
 fn compose_me(input: &str) -> String {
-    // The macro `format!` has the same syntax as `println!`, but it returns a
-    // string instead of printing it to the terminal.
-    // Equivalent to `input.to_string() + " world!"`
-    format!("{input} world!")
+    // Макрос `format!` має той самий синтаксис, що і `println!`, але повертає
+    // рядок замість виводити його на термінал.
+    // Еквівалентно `input.to_string() + " світ!"`
+    format!("{input} світ!")
 }
 
 fn replace_me(input: &str) -> String {
-    input.replace("cars", "balloons")
+    input.replace("машини", "кульки")
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]
@@ -23,27 +23,27 @@ mod tests {
 
     #[test]
     fn trim_a_string() {
-        assert_eq!(trim_me("Hello!     "), "Hello!");
-        assert_eq!(trim_me("  What's up!"), "What's up!");
-        assert_eq!(trim_me("   Hola!  "), "Hola!");
-        assert_eq!(trim_me("Hi!"), "Hi!");
+        assert_eq!(trim_me("Привіт!     "), "Привіт!");
+        assert_eq!(trim_me("  Як справи?"), "Як справи?");
+        assert_eq!(trim_me("   Привіт!  "), "Привіт!");
+        assert_eq!(trim_me("Привіт!"), "Привіт!");
     }
 
     #[test]
     fn compose_a_string() {
-        assert_eq!(compose_me("Hello"), "Hello world!");
-        assert_eq!(compose_me("Goodbye"), "Goodbye world!");
+        assert_eq!(compose_me("Привіт"), "Привіт світ!");
+        assert_eq!(compose_me("Бувай"), "Бувай світ!");
     }
 
     #[test]
     fn replace_a_string() {
         assert_eq!(
-            replace_me("I think cars are cool"),
-            "I think balloons are cool",
+            replace_me("Я думаю, машини круті"),
+            "Я думаю, кульки круті",
         );
         assert_eq!(
-            replace_me("I love to look at cars"),
-            "I love to look at balloons",
+            replace_me("Я люблю дивитись на машини"),
+            "Я люблю дивитись на кульки",
         );
     }
 }

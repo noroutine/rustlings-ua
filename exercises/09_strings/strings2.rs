@@ -1,14 +1,14 @@
-// TODO: Fix the compiler error in the `main` function without changing this function.
+// TODO: Виправте помилку компілятора у функції `main`, не змінюючи цю функцію.
 fn is_a_color_word(attempt: &str) -> bool {
-    attempt == "green" || attempt == "blue" || attempt == "red"
+    attempt == "зелений" || attempt == "синій" || attempt == "червоний"
 }
 
 fn main() {
-    let word = String::from("green"); // Don't change this line.
+    let word = String::from("зелений"); // Не змінюйте цей рядок.
 
     if is_a_color_word(word) {
-        println!("That is a color word I know!");
+        println!("Я знаю цей колір!");
     } else {
-        println!("That is not a color word I know.");
+        println!("Цей колір мені невідомий.");
     }
 }

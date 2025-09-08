@@ -1,9 +1,9 @@
-# Strings
+# Рядки (Strings)
 
-Rust has two string types, a string slice (`&str`) and an owned string (`String`).
-We're not going to dictate when you should use which one, but we'll show you how
-to identify and create them, as well as use them.
+Rust має два типи рядків: зріз рядка (`&str`) та власний (owned) рядок (`String`).
+Ми не будемо диктувати, коли вам слід використовувати кожен з них, але ми покажемо вам, як
+їх ідентифікувати і створювати, а також використовувати.
 
-## Further information
+## Додаткова інформація
 
-- [Strings](https://doc.rust-lang.org/book/ch08-02-strings.html)
+- [Рядки (Strings)](https://doc.rust-lang.org/book/ch08-02-strings.html)

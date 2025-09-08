@@ -1,9 +1,9 @@
 fn current_favorite_color() -> String {
-    // Equivalent to `String::from("blue")`
-    "blue".to_string()
+    // Еквівалентно `String::from("синій")`
+    "синій".to_string()
 }
 
 fn main() {
     let answer = current_favorite_color();
-    println!("My current favorite color is {answer}");
+    println!("Мій найулюбленіший колір зараз: {answer}");
 }

@@ -1,4 +1,4 @@
-// Calls of this function should be replaced with calls of `string_slice` or `string`.
+// Виклики цієї функції повинні бути замінені на виклики `string_slice` або `string`.
 fn placeholder() {}
 
 fn string_slice(arg: &str) {
@@ -9,29 +9,29 @@ fn string(arg: String) {
     println!("{arg}");
 }
 
-// TODO: Here are a bunch of values - some are `String`, some are `&str`.
-// Your task is to replace `placeholder(…)` with either `string_slice(…)`
-// or `string(…)` depending on what you think each value is.
+// TODO: Ось багато значень - деякі є `String`, деякі є `&str`.
+// Ваша задача - замінити `placeholder(…)` на `string_slice(…)`
+// або `string(…)` залежно від того, яким ви вважаєте кожне значення.
 fn main() {
-    placeholder("blue");
+    placeholder("синій");
 
-    placeholder("red".to_string());
+    placeholder("червоний".to_string());
 
-    placeholder(String::from("hi"));
+    placeholder(String::from("привіт"));
 
-    placeholder("rust is fun!".to_owned());
+    placeholder("rust цікавий!".to_owned());
 
-    placeholder("nice weather".into());
+    placeholder("гарна погода".into());
 
-    placeholder(format!("Interpolation {}", "Station"));
+    placeholder(format!("Станція {}", "Арсенальна"));
 
-    // WARNING: This is byte indexing, not character indexing.
-    // Character indexing can be done using `s.chars().nth(INDEX)`.
-    placeholder(&String::from("abc")[0..1]);
+    // ПОПЕРЕДЖЕННЯ: Це байтове індексування, не символьне.
+    // Символьне індексування можна виконати через `s.chars().nth(INDEX)`.
+    placeholder(&String::from("абв")[0..1]);
 
-    placeholder("  hello there ".trim());
+    placeholder("  привіт там ".trim());
 
-    placeholder("Happy Monday!".replace("Mon", "Tues"));
+    placeholder("Гарного понеділка!".replace("понеділ", "вівтор"));
 
-    placeholder("mY sHiFt KeY iS sTiCkY".to_lowercase());
+    placeholder("мОЯ КЛаВіша шИФт ЗАстрЯла".to_lowercase());
 }

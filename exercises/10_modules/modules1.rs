@@ -1,13 +1,13 @@
-// TODO: Fix the compiler error about calling a private function.
+// TODO: Виправте помилку компілятора про виклик приватної функції.
 mod sausage_factory {
-    // Don't let anybody outside of this module see this!
+    // Не дозволяйте нікому поза цим модулем бачити цю функцію!
     fn get_secret_recipe() -> String {
-        String::from("Ginger")
+        String::from("Імбир")
     }
 
     fn make_sausage() {
         get_secret_recipe();
-        println!("sausage!");
+        println!("ковбаса!");
     }
 }
 

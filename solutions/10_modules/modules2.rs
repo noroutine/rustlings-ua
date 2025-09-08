@@ -1,22 +1,22 @@
 mod delicious_snacks {
-    // Added `pub` and used the expected alias after `as`.
+    // Додано `pub` і використано очікуваний псевдонім (alias) після `as`.
     pub use self::fruits::PEAR as fruit;
     pub use self::veggies::CUCUMBER as veggie;
 
     mod fruits {
-        pub const PEAR: &str = "Pear";
-        pub const APPLE: &str = "Apple";
+        pub const PEAR: &str = "Груша";
+        pub const APPLE: &str = "Яблуко";
     }
 
     mod veggies {
-        pub const CUCUMBER: &str = "Cucumber";
-        pub const CARROT: &str = "Carrot";
+        pub const CUCUMBER: &str = "Огірок";
+        pub const CARROT: &str = "Морква";
     }
 }
 
 fn main() {
     println!(
-        "favorite snacks: {} and {}",
+        "улюблені закуски: {} і {},"
         delicious_snacks::fruit,
         delicious_snacks::veggie,
     );

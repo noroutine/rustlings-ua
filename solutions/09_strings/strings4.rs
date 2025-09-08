@@ -7,32 +7,32 @@ fn string(arg: String) {
 }
 
 fn main() {
-    string_slice("blue");
+    string_slice("синій");
 
-    string("red".to_string());
+    string("червоний".to_string());
 
-    string(String::from("hi"));
+    string(String::from("привіт"));
 
-    string("rust is fun!".to_owned());
+    string("rust цікавий!".to_owned());
 
-    // Here, both answers work.
-    // `.into()` converts a type into an expected type.
-    // If it is called where `String` is expected, it will convert `&str` to `String`.
-    string("nice weather".into());
-    // But if it is called where `&str` is expected, then `&str` is kept `&str` since no conversion is needed.
-    // If you remove the `#[allow(…)]` line, then Clippy will tell you to remove `.into()` below since it is a useless conversion.
+    // Тут обидва варіанти працюють.
+    // `.into()` перетворює тип в очікуваний тип.
+    // Якщо він викликається де очікується `String`, він перетворить `&str` на `String`.
+    string("гарна погода".into());
+    // Але якщо він викликається де очікується `&str`, то `&str` залишається `&str`, оскільки перетворення не потрібно.
+    // Якщо ви приберете рядок `#[allow(…)]`, то Clippy скаже вам прибрати `.into()` нижче, оскільки це марне перетворення.
     #[allow(clippy::useless_conversion)]
-    string_slice("nice weather".into());
+    string_slice("гарна погода".into());
 
-    string(format!("Interpolation {}", "Station"));
+    string(format!("Станція {}", "Арсенальна"));
 
-    // WARNING: This is byte indexing, not character indexing.
-    // Character indexing can be done using `s.chars().nth(INDEX)`.
-    string_slice(&String::from("abc")[0..1]);
+    // ПОПЕРЕДЖЕННЯ: Це байтове індексування, не символьне.
+    // Символьне індексування можна виконати через `s.chars().nth(INDEX)`.
+    string_slice(&String::from("абв")[0..1]);
 
-    string_slice("  hello there ".trim());
+    string_slice("  привіт там ".trim());
 
-    string("Happy Monday!".replace("Mon", "Tues"));
+    string("Гарного понеділка!".replace("понеділ", "вівтор"));
 
-    string("mY sHiFt KeY iS sTiCkY".to_lowercase());
+    string("мОЯ КЛаВіша шИФт ЗАстрЯла".to_lowercase());
 }

@@ -1,17 +1,17 @@
 fn trim_me(input: &str) -> &str {
-    // TODO: Remove whitespace from both ends of a string.
+    // TODO: Видаліть пробіли з обох кінців рядка.
 }
 
 fn compose_me(input: &str) -> String {
-    // TODO: Add " world!" to the string! There are multiple ways to do this.
+    // TODO: Додайте " світ!" до рядка! Є декілька способів це зробити.
 }
 
 fn replace_me(input: &str) -> String {
-    // TODO: Replace "cars" in the string with "balloons".
+    // TODO: Замініть "машини" в рядку на "кульки".
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]
@@ -20,27 +20,27 @@ mod tests {
 
     #[test]
     fn trim_a_string() {
-        assert_eq!(trim_me("Hello!     "), "Hello!");
-        assert_eq!(trim_me("  What's up!"), "What's up!");
-        assert_eq!(trim_me("   Hola!  "), "Hola!");
-        assert_eq!(trim_me("Hi!"), "Hi!");
+        assert_eq!(trim_me("Привіт!     "), "Привіт!");
+        assert_eq!(trim_me("  Як справи?"), "Як справи?");
+        assert_eq!(trim_me("   Привіт!  "), "Привіт!");
+        assert_eq!(trim_me("Привіт!"), "Привіт!");
     }
 
     #[test]
     fn compose_a_string() {
-        assert_eq!(compose_me("Hello"), "Hello world!");
-        assert_eq!(compose_me("Goodbye"), "Goodbye world!");
+        assert_eq!(compose_me("Привіт"), "Привіт світ!");
+        assert_eq!(compose_me("Бувай"), "Бувай світ!");
     }
 
     #[test]
     fn replace_a_string() {
         assert_eq!(
-            replace_me("I think cars are cool"),
-            "I think balloons are cool",
+            replace_me("Я думаю, машини круті"),
+            "Я думаю, кульки круті",
         );
         assert_eq!(
-            replace_me("I love to look at cars"),
-            "I love to look at balloons",
+            replace_me("Я люблю дивитись на машини"),
+            "Я люблю дивитись на кульки",
         );
     }
 }

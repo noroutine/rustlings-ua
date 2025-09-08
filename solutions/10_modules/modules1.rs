@@ -1,12 +1,12 @@
 mod sausage_factory {
     fn get_secret_recipe() -> String {
-        String::from("Ginger")
+        String::from("Імбир")
     }
 
-    // Added `pub` before `fn` to make the function accessible outside the module.
+    // Додано `pub` перед `fn`, щоб зробити функцію доступною поза модулем.
     pub fn make_sausage() {
         get_secret_recipe();
-        println!("sausage!");
+        println!("ковбаса!");
     }
 }
 
