@@ -1,15 +1,15 @@
-// This exercise is an altered version of the `errors4` exercise. It uses some
-// concepts that we won't get to until later in the course, like `Box` and the
-// `From` trait. It's not important to understand them in detail right now, but
-// you can read ahead if you like. For now, think of the `Box<dyn ???>` type as
-// an "I want anything that does ???" type.
+// Ця вправа є зміненою версією вправи `errors4`. Вона використовує деякі
+// концепції, до яких ми дійдемо пізніше в курсі, як от `Box` та
+// трейт `From`. Неважливо розуміти їх детально прямо зараз, але
+// ви можете почитати наперед, якщо хочете. Поки що, думайте про тип `Box<dyn ???>` як
+// "я хочу будь-що, що робить ???" тип.
 //
-// In short, this particular use case for boxes is for when you want to own a
-// value and you care only that it is a type which implements a particular
-// trait. To do so, the `Box` is declared as of type `Box<dyn Trait>` where
-// `Trait` is the trait the compiler looks for on any value used in that
-// context. For this exercise, that context is the potential errors which
-// can be returned in a `Result`.
+// Коротко кажучи, цей конкретний випадок використання boxes для того, коли ви хочете володіти
+// значенням і вам важливо лише те, що воно є типом, який реалізує певний
+// трейт. Для цього `Box` оголошується як тип `Box<dyn Trait>`, де
+// `Trait` - це трейт, який компілятор шукає на будь-якому значенні, що використовується в
+// тому контексті. Для цієї вправи цей контекст - це потенційні помилки, які
+// можуть бути повернені в `Result`, тобто трейт Error
 
 use std::error::Error;
 use std::fmt;
@@ -20,12 +20,12 @@ enum CreationError {
     Zero,
 }
 
-// This is required so that `CreationError` can implement `Error`.
+// Це необхідно, щоб `CreationError` міг реалізувати `Error`.
 impl fmt::Display for CreationError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let description = match *self {
-            CreationError::Negative => "number is negative",
-            CreationError::Zero => "number is zero",
+            CreationError::Negative => "число негативне",
+            CreationError::Zero => "число дорівнює нулю",
         };
         f.write_str(description)
     }
@@ -46,8 +46,8 @@ impl PositiveNonzeroInteger {
     }
 }
 
-// TODO: Add the correct return type `Result<(), Box<dyn ???>>`. What can we
-// use to describe both errors? Is there a trait which both errors implement?
+// TODO: Додайте правильний тип повернення `Result<(), Box<dyn ???>>`. Що ми можемо
+// використовувати, щоб описати обидві помилки? Чи є трейт, який реалізують обидві помилки?
 fn main() {
     let pretend_user_input = "42";
     let x: i64 = pretend_user_input.parse()?;

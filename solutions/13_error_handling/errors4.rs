@@ -20,7 +20,7 @@ impl PositiveNonzeroInteger {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]

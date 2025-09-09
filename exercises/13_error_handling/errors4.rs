@@ -9,14 +9,14 @@ struct PositiveNonzeroInteger(u64);
 
 impl PositiveNonzeroInteger {
     fn new(value: i64) -> Result<Self, CreationError> {
-        // TODO: This function shouldn't always return an `Ok`.
-        // Read the tests below to clarify what should be returned.
+        // TODO: Ця функція не повинна завжди повертати `Ok`.
+        // Прочитайте тести нижче, щоб з'ясувати, що слід повертати.
         Ok(Self(value as u64))
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]

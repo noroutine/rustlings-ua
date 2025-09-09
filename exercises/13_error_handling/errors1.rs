@@ -1,20 +1,20 @@
-// TODO: This function refuses to generate text to be printed on a nametag if
-// you pass it an empty string. It'd be nicer if it explained what the problem
-// was instead of just returning `None`. Thankfully, Rust has a similar
-// construct to `Option` that can be used to express error conditions. Change
-// the function signature and body to return `Result<String, String>` instead
-// of `Option<String>`.
+// TODO: Ця функція відмовляється генерувати текст для друку на бейджику, якщо
+// ви передаєте їй порожній рядок. Було б краще, якби вона пояснювала, в чому проблема,
+// замість простого повернення `None`. На щастя, Rust має подібну
+// конструкцію до `Option`, яку можна використовувати для вираження умов помилок. Змініть
+// сигнатуру функції та тіло, щоб повертати `Result<String, String>` замість
+// `Option<String>`.
 fn generate_nametag_text(name: String) -> Option<String> {
     if name.is_empty() {
-        // Empty names aren't allowed
+        // Порожні імена не дозволені
         None
     } else {
-        Some(format!("Hi! My name is {name}"))
+        Some(format!("Привіт! Мене звати {name}"))
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете тут експериментувати, якщо бажаєте.
 }
 
 #[cfg(test)]
@@ -25,7 +25,7 @@ mod tests {
     fn generates_nametag_text_for_a_nonempty_name() {
         assert_eq!(
             generate_nametag_text("Beyoncé".to_string()).as_deref(),
-            Ok("Hi! My name is Beyoncé"),
+            Ok("Привіт! Мене звати Beyoncé"),
         );
     }
 
@@ -35,7 +35,7 @@ mod tests {
             generate_nametag_text(String::new())
                 .as_ref()
                 .map_err(|e| e.as_str()),
-            Err("Empty names aren't allowed"),
+            Err("Порожні імена не дозволені"),
         );
     }
 }
