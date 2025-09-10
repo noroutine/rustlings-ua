@@ -2,11 +2,11 @@ trait AppendBar {
     fn append_bar(self) -> Self;
 }
 
-// TODO: Implement the trait `AppendBar` for a vector of strings.
-// `append_bar` should push the string "Bar" into the vector.
+// TODO: Реалізуйте трейт `AppendBar` для вектора рядків (strings).
+// `append_bar` має додати рядок "Bar" у вектор.
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

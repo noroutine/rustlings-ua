@@ -1,6 +1,6 @@
 trait Licensed {
     fn licensing_info(&self) -> String {
-        "Default license".to_string()
+        "Стандартна ліцензія".to_string()
     }
 }
 
@@ -10,13 +10,13 @@ struct OtherSoftware;
 impl Licensed for SomeSoftware {}
 impl Licensed for OtherSoftware {}
 
-// TODO: Fix the compiler error by only changing the signature of this function.
+// TODO: Виправте помилку компілятора, змінивши лише сигнатуру цієї функції.
 fn compare_license_types(software1: ???, software2: ???) -> bool {
     software1.licensing_info() == software2.licensing_info()
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

@@ -1,24 +1,24 @@
-// Tests are important to ensure that your code does what you think it should
-// do.
+// Тести важливі, щоб переконатись, що ваш код робить те, що, на вашу думку,
+// він повинен робити.
 
 fn is_even(n: i64) -> bool {
     n % 2 == 0
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]
 mod tests {
-    // When writing unit tests, it is common to import everything from the outer
-    // module (`super`) using a wildcard.
+    // При написанні модульних тестів звичайно імпортувати все з зовнішнього
+    // модуля (`super`), використовуючи шаблон.
     use super::*;
 
     #[test]
     fn you_can_assert() {
         assert!(is_even(0));
         assert!(!is_even(-1));
-        //      ^ You can assert `false` using the negation operator `!`.
+        //      ^ Ви можете стверджувати `false`, використовуючи оператор заперечення `!`.
     }
 }

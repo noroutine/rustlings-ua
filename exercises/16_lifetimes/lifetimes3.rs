@@ -1,6 +1,6 @@
-// Lifetimes are also needed when structs hold references.
+// Час життя (lifetimes) також потрібен, коли структури містять посилання.
 
-// TODO: Fix the compiler errors about the struct.
+// TODO: Виправте помилки компілятора стосовно структури.
 struct Book {
     author: &str,
     title: &str,
@@ -8,7 +8,7 @@ struct Book {
 
 fn main() {
     let book = Book {
-        author: "George Orwell",
+        author: "Джордж Орвелл",
         title: "1984",
     };
 

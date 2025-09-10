@@ -1,5 +1,5 @@
-// The trait `AppendBar` has only one function which appends "Bar" to any object
-// implementing this trait.
+// Трейт (trait) `AppendBar` має лише одну функцію, яка додає "Bar" до будь-якого об'єкта,
+// що реалізує цей трейт.
 trait AppendBar {
     fn append_bar(self) -> Self;
 }

@@ -3,27 +3,27 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 }
 
 fn main() {
-    let string1 = String::from("long string is long");
-    // Solution1: You can move `strings2` out of the inner block so that it is
-    // not dropped before the print statement.
+    let string1 = String::from("дуже довгий рядок");
+    // Рішення 1: Ви можете перемістити `string2` за межі внутрішнього блоку,
+    // щоб вона не була знищена перед виведенням.
     let string2 = String::from("xyz");
     let result;
     {
         result = longest(&string1, &string2);
     }
-    println!("The longest string is '{result}'");
-    // `string2` dropped at the end of the function.
+    println!("Найдовший рядок - це '{result}'");
+    // `string2` знищується в кінці функції.
 
     // =========================================================================
 
-    let string1 = String::from("long string is long");
+    let string1 = String::from("дуже довгий рядок");
     let result;
     {
         let string2 = String::from("xyz");
         result = longest(&string1, &string2);
-        // Solution2: You can move the print statement into the inner block so
-        // that it is executed before `string2` is dropped.
-        println!("The longest string is '{result}'");
-        // `string2` dropped here (end of the inner scope).
+        // Рішення 2: Ви можете перемістити виведення у внутрішній блок,
+        // щоб воно виконалося перед знищенням `string2`.
+        println!("Найдовший рядок - це '{result}'");
+        // `string2` знищується тут (кінець внутрішньої області видимості).
     }
 }

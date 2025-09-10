@@ -1,9 +1,10 @@
-// The Rust compiler needs to know how to check whether supplied references are
-// valid, so that it can let the programmer know if a reference is at risk of
-// going out of scope before it is used. Remember, references are borrows and do
-// not own their own data. What if their owner goes out of scope?
+// Компілятор Rust повинен мати змогу перевіряти, чи є надані посилання (references)
+// дійсними, щоб можна було повідомити програміста, якщо посилання ризикує
+// вийти за межі області видимості (scope) перед його використанням. Пам’ятайте,
+// посилання — це запозичення (borrows) і вони не володіють своїми даними.
+// А що, якщо їх власник вийде за межі області видимості?
 
-// TODO: Fix the compiler error by updating the function signature.
+// TODO: Виправте помилку компілятора, оновивши сигнатуру функції.
 fn longest(x: &str, y: &str) -> &str {
     if x.len() > y.len() {
         x
@@ -13,7 +14,7 @@ fn longest(x: &str, y: &str) -> &str {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

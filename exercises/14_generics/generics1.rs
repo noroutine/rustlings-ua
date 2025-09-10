@@ -1,14 +1,14 @@
-// `Vec<T>` is generic over the type `T`. In most cases, the compiler is able to
-// infer `T`, for example after pushing a value with a concrete type to the vector.
-// But in this exercise, the compiler needs some help through a type annotation.
+// `Vec<T>` є дженериком (generic) над типом `T`. У більшості випадків компілятор може
+// автоматично вивести `T`, наприклад після додавання значення з конкретним типом до вектора.
+// Але в цій вправі компілятору потрібна допомога через анотацію типу (type annotation).
 
 fn main() {
-    // TODO: Fix the compiler error by annotating the type of the vector
-    // `Vec<T>`. Choose `T` as some integer type that can be created from
-    // `u8` and `i8`.
+    // TODO: Виправте помилку компілятора, додавши анотацію типу для вектора
+    // `Vec<T>`. Оберіть `T` як якийсь цілочисловий тип, що може бути створений з
+    // `u8` та `i8`.
     let mut numbers = Vec::new();
 
-    // Don't change the lines below.
+    // Не змінюйте рядки нижче.
     let n1: u8 = 42;
     numbers.push(n1.into());
     let n2: i8 = -1;

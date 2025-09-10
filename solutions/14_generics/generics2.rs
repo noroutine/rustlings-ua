@@ -9,7 +9,7 @@ impl<T> Wrapper<T> {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

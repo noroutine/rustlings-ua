@@ -1,6 +1,6 @@
 trait Licensed {
     fn licensing_info(&self) -> String {
-        "Default license".to_string()
+        "Стандартна ліцензія".to_string()
     }
 }
 
@@ -16,7 +16,7 @@ fn compare_license_types(software1: impl Licensed, software2: impl Licensed) -> 
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

@@ -1,4 +1,4 @@
-// Don't change this function.
+// Не змінюйте цю функцію.
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x
@@ -8,13 +8,13 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 }
 
 fn main() {
-    // TODO: Fix the compiler error by moving one line.
+    // TODO: Виправте помилку компілятора, перемістивши один рядок.
 
-    let string1 = String::from("long string is long");
+    let string1 = String::from("дуже довгий рядок");
     let result;
     {
         let string2 = String::from("xyz");
         result = longest(&string1, &string2);
     }
-    println!("The longest string is '{result}'");
+    println!("Найдовший рядок - це '{result}'");
 }

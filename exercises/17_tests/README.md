@@ -1,7 +1,7 @@
-# Tests
+# Тести (Tests)
 
-Going out of order from the book to cover tests -- many of the following exercises will ask you to make tests pass!
+Виходимо з порядку книги, щоб покрити тести — багато з наступних вправ попросять вас зробити тести такими, що проходять!
 
-## Further information
+## Додаткова інформація
 
 - [Writing Tests](https://doc.rust-lang.org/book/ch11-01-writing-tests.html)

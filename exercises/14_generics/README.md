@@ -1,11 +1,10 @@
-# Generics
+# Дженерики (Generics)
 
-Generics is the topic of generalizing types and functionalities to broader cases.
-This is extremely useful for reducing code duplication in many ways, but can call for some rather involved syntax.
-Namely, being generic requires taking great care to specify over which types a generic type is actually considered valid.
-The simplest and most common use of generics is for type parameters.
+Дженерики (generics) — це тема узагальнення типів та функціональностей на більш широкі випадки.
+Це надзвичайно корисно для зменшення дублювання коду в багатьох випадках, але може вимагати досить складного синтаксису, оскільки використання дженериків вимагає великої уваги до того, над якими типами дженерик-тип насправді вважається валідним.
+Найпростіше та найпоширеніше використання дженериків — це параметри типу (type parameters).
 
-## Further information
+## Додаткова інформація
 
 - [Generic Data Types](https://doc.rust-lang.org/book/ch10-01-syntax.html)
 - [Bounds](https://doc.rust-lang.org/rust-by-example/generics/bounds.html)

@@ -1,22 +1,15 @@
-# Lifetimes
+# Час життя (Lifetimes)
 
-Lifetimes tell the compiler how to check whether references live long
-enough to be valid in any given situation. For example lifetimes say
-"make sure parameter 'a' lives as long as parameter 'b' so that the return
-value is valid".
+Час життя (lifetimes) вказує компілятору, як перевіряти, чи посилання (references) живуть
+достатньо довго, щоб бути дійсними в будь-якій заданій ситуації. Наприклад, час життя говорить "переконайся, що параметр 'a' живе так само довго, як параметр 'b', щоб значення повернення було дійсним".
 
-They are only necessary on borrows, i.e. references,
-since copied parameters or moves are owned in their scope and cannot
-be referenced outside. Lifetimes mean that calling code of e.g. functions
-can be checked to make sure their arguments are valid. Lifetimes are
-restrictive of their callers.
+Вони необхідні лише для запозичень (borrows), тобто посилань, оскільки скопійовані параметри чи переміщення є власністю в їхній області видимості і не можуть мати посилань ззовні. Час життя означає, що код, що викликає, наприклад, функції може бути перевірений для впевненості, що їхні аргументи є дійсними. Час життя обмежує тих, хто їх викликає.
 
-If you'd like to learn more about lifetime annotations, the
-[lifetimekata](https://tfpk.github.io/lifetimekata/) project
-has a similar style of exercises to Rustlings, but is all about
-learning to write lifetime annotations.
+Якщо ви хотіли б дізнатися більше про анотації часу життя, проект
+[lifetimekata](https://tfpk.github.io/lifetimekata/)
+має подібний стиль вправ до Rustlings, але повністю присвячений вивченню написання анотацій часу життя.
 
-## Further information
+## Додаткова інформація
 
 - [Lifetimes (in Rust By Example)](https://doc.rust-lang.org/stable/rust-by-example/scope/lifetime.html)
 - [Validating References with Lifetimes](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)

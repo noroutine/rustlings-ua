@@ -1,10 +1,10 @@
-// This powerful wrapper provides the ability to store a positive integer value.
-// TODO: Rewrite it using a generic so that it supports wrapping ANY type.
+// Ця потужна обгортка надає можливість зберігати додатне ціле значення.
+// TODO: Перепишіть її з використанням дженерика (generic), щоб вона підтримувала обгортання БУДЬ-ЯКОГО типу.
 struct Wrapper {
     value: u32,
 }
 
-// TODO: Adapt the struct's implementation to be generic over the wrapped value.
+// TODO: Адаптуйте реалізацію структури, щоб вона була дженериком над обгорнутим значенням.
 impl Wrapper {
     fn new(value: u32) -> Self {
         Wrapper { value }
@@ -12,7 +12,7 @@ impl Wrapper {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

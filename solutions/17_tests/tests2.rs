@@ -1,11 +1,11 @@
-// Calculates the power of 2 using a bit shift.
-// `1 << n` is equivalent to "2 to the power of n".
+// Обчислює степінь 2, використовуючи бітовий зсув.
+// `1 << n` еквівалентно "2 у степені n".
 fn power_of_2(n: u8) -> u64 {
     1 << n
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

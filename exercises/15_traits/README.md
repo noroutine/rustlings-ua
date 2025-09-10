@@ -1,19 +1,19 @@
-# Traits
+# Трейти (Traits)
 
-A trait is a collection of methods.
+Трейт (trait) — це колекція методів.
 
-Data types can implement traits. To do so, the methods making up the trait are defined for the data type. For example, the `String` data type implements the `From<&str>` trait. This allows a user to write `String::from("hello")`.
+Типи даних можуть реалізовувати трейти. Для цього методи, що складають трейт, визначаються для типу даних. Наприклад, тип даних `String` реалізує трейт `From<&str>`. Це дозволяє користувачу писати `String::from("hello")`.
 
-In this way, traits are somewhat similar to Java interfaces and C++ abstract classes.
+Таким чином, трейти дещо схожі на інтерфейси Java та абстрактні класи C++.
 
-Some additional common Rust traits include:
+Ось деякі трейти Rust, що часто використовуються:
 
-- `Clone` (the `clone` method)
-- `Display` (which allows formatted display via `{}`)
-- `Debug` (which allows formatted display via `{:?}`)
+- `Clone` (метод `clone`)
+- `Display` (який дозволяє форматований вивід через `{}`)
+- `Debug` (який дозволяє форматований вивід через `{:?}`)
 
-Because traits indicate shared behavior between data types, they are useful when writing generics.
+Оскільки трейти вказують на спільну поведінку між типами даних, вони корисні при написанні дженериків (generics).
 
-## Further information
+## Додаткова інформація
 
 - [Traits](https://doc.rust-lang.org/book/ch10-02-traits.html)

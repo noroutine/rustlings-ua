@@ -4,14 +4,14 @@ trait AppendBar {
 
 impl AppendBar for Vec<String> {
     fn append_bar(mut self) -> Self {
-        //        ^^^ this is important
+        //        ^^^ це важливо
         self.push(String::from("Bar"));
         self
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

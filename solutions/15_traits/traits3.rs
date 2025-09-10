@@ -1,6 +1,6 @@
 trait Licensed {
     fn licensing_info(&self) -> String {
-        "Default license".to_string()
+        "Стандартна ліцензія".to_string()
     }
 }
 
@@ -16,7 +16,7 @@ impl Licensed for SomeSoftware {}
 impl Licensed for OtherSoftware {}
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]
@@ -25,7 +25,7 @@ mod tests {
 
     #[test]
     fn is_licensing_info_the_same() {
-        let licensing_info = "Default license";
+        let licensing_info = "Стандартна ліцензія";
         let some_software = SomeSoftware { version_number: 1 };
         let other_software = OtherSoftware {
             version_number: "v2.0.0".to_string(),

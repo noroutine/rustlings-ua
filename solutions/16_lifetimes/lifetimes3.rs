@@ -1,7 +1,7 @@
-// Lifetimes are also needed when structs hold references.
+// Час життя (lifetimes) також потрібен, коли структури містять посилання.
 
 struct Book<'a> {
-    //     ^^^^ added a lifetime annotation
+    //     ^^^^ додано анотацію часу життя
     author: &'a str,
     //       ^^
     title: &'a str,
@@ -10,7 +10,7 @@ struct Book<'a> {
 
 fn main() {
     let book = Book {
-        author: "George Orwell",
+        author: "Джордж Орвелл",
         title: "1984",
     };
 
