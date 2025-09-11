@@ -1,39 +1,39 @@
-// In this exercise, we are given a `Vec` of `u32` called `numbers` with values
-// ranging from 0 to 99. We would like to use this set of numbers within 8
-// different threads simultaneously. Each thread is going to get the sum of
-// every eighth value with an offset.
+// У цій вправі нам дано `Vec` з `u32`, названий `numbers`, зі значеннями
+// від 0 до 99. Ми б хотіли використати цей набір чисел в 8
+// різних потоках (threads) одночасно. Кожен потік отримає суму
+// кожного восьмого значення з зміщенням.
 //
-// The first thread (offset 0), will sum 0, 8, 16, …
-// The second thread (offset 1), will sum 1, 9, 17, …
-// The third thread (offset 2), will sum 2, 10, 18, …
+// Перший потік (зміщення 0) підсумує 0, 8, 16, …
+// Другий потік (зміщення 1) підсумує 1, 9, 17, …
+// Третій потік (зміщення 2) підсумує 2, 10, 18, …
 // …
-// The eighth thread (offset 7), will sum 7, 15, 23, …
+// Восьмий потік (зміщення 7) підсумує 7, 15, 23, …
 //
-// Each thread should own a reference-counting pointer to the vector of
-// numbers. But `Rc` isn't thread-safe. Therefore, we need to use `Arc`.
+// Кожен потік має володіти показчиком із підрахунком посилань на вектор
+// чисел. Але `Rc` не є потокобезпечним. Отже, нам потрібно використати `Arc`.
 //
-// Don't get distracted by how threads are spawned and joined. We will practice
-// that later in the exercises about threads.
+// Не відволікайтеся на те, як потоки створюються та об'єднуються. Ми попрактикуємо
+// це пізніше у вправах про потоки (threads).
 
-// Don't change the lines below.
+// Не змінюйте рядки нижче.
 #![forbid(unused_imports)]
 use std::{sync::Arc, thread};
 
 fn main() {
     let numbers: Vec<_> = (0..100u32).collect();
 
-    // TODO: Define `shared_numbers` by using `Arc`.
+    // TODO: Визначте `shared_numbers`, використовуючи `Arc`.
     // let shared_numbers = ???;
 
     let mut join_handles = Vec::new();
 
     for offset in 0..8 {
-        // TODO: Define `child_numbers` using `shared_numbers`.
+        // TODO: Визначте `child_numbers`, використовуючи `shared_numbers`.
         // let child_numbers = ???;
 
         let handle = thread::spawn(move || {
             let sum: u32 = child_numbers.iter().filter(|&&n| n % 8 == offset).sum();
-            println!("Sum of offset {offset} is {sum}");
+            println!("Сума по зміщенню {offset} є {sum}");
         });
 
         join_handles.push(handle);

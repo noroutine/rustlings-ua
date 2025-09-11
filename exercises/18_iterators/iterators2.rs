@@ -1,8 +1,8 @@
-// In this exercise, you'll learn some of the unique advantages that iterators
-// can offer.
+// У цій вправі ви вивчите деякі унікальні переваги, які можуть запропонувати
+// ітератори.
 
-// TODO: Complete the `capitalize_first` function.
-// "hello" -> "Hello"
+// TODO: Доповніть функцію `capitalize_first`.
+// "привіт" -> "Привіт"
 fn capitalize_first(input: &str) -> String {
     let mut chars = input.chars();
     match chars.next() {
@@ -11,22 +11,22 @@ fn capitalize_first(input: &str) -> String {
     }
 }
 
-// TODO: Apply the `capitalize_first` function to a slice of string slices.
-// Return a vector of strings.
+// TODO: Застосуйте функцію `capitalize_first` до зріза рядкових зрізів.
+// Поверніть вектор рядків.
 // ["hello", "world"] -> ["Hello", "World"]
 fn capitalize_words_vector(words: &[&str]) -> Vec<String> {
     // ???
 }
 
-// TODO: Apply the `capitalize_first` function again to a slice of string
-// slices. Return a single string.
+// TODO: Застосуйте функцію `capitalize_first` знову до зріза рядкових
+// зрізів. Поверніть один рядок.
 // ["hello", " ", "world"] -> "Hello World"
 fn capitalize_words_string(words: &[&str]) -> String {
     // ???
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]
@@ -35,7 +35,7 @@ mod tests {
 
     #[test]
     fn test_success() {
-        assert_eq!(capitalize_first("hello"), "Hello");
+        assert_eq!(capitalize_first("привіт"), "Привіт");
     }
 
     #[test]
@@ -45,8 +45,8 @@ mod tests {
 
     #[test]
     fn test_iterate_string_vec() {
-        let words = vec!["hello", "world"];
-        assert_eq!(capitalize_words_vector(&words), ["Hello", "World"]);
+        let words = vec!["привіт", "світ"];
+        assert_eq!(capitalize_words_vector(&words), ["Привіт", "Світ"]);
     }
 
     #[test]

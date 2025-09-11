@@ -1,7 +1,7 @@
-// This program spawns multiple threads that each runs for at least 250ms, and
-// each thread returns how much time it took to complete. The program should
-// wait until all the spawned threads have finished and should collect their
-// return values into a vector.
+// Ця програма створює кілька потоків (threads), кожен з яких виконується
+// щонайменше 250мс, і кожен потік повертає, скільки часу знадобилося для 
+// завершення. Програма має чекати, поки всі створені потоки не завершать
+// роботу і має зібрати їх повернені значення у вектор.
 
 use std::{
     thread,
@@ -14,7 +14,7 @@ fn main() {
         let handle = thread::spawn(move || {
             let start = Instant::now();
             thread::sleep(Duration::from_millis(250));
-            println!("Thread {i} done");
+            println!("Потік {i} завершується");
             start.elapsed().as_millis()
         });
         handles.push(handle);
@@ -22,16 +22,16 @@ fn main() {
 
     let mut results = Vec::new();
     for handle in handles {
-        // Collect the results of all threads into the `results` vector.
+        // Збираємо результати всіх потоків у вектор `results`.
         results.push(handle.join().unwrap());
     }
 
     if results.len() != 10 {
-        panic!("Oh no! Some thread isn't done yet!");
+        panic!("О, ні! Якийсь потік ще не завершився!");
     }
 
     println!();
     for (i, result) in results.into_iter().enumerate() {
-        println!("Thread {i} took {result}ms");
+        println!("Потік {i} виконувався {result}мс");
     }
 }

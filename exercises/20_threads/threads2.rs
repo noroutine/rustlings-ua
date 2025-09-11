@@ -1,6 +1,6 @@
-// Building on the last exercise, we want all of the threads to complete their
-// work. But this time, the spawned threads need to be in charge of updating a
-// shared value: `JobStatus.jobs_done`
+// Продовжуючи останню вправу, ми хочемо, щоб всі потоки завершили свою
+// роботу. Але цього разу створені потоки мають оновлювати
+// спільне значення: `JobStatus.jobs_done`
 
 use std::{sync::Arc, thread, time::Duration};
 
@@ -9,7 +9,7 @@ struct JobStatus {
 }
 
 fn main() {
-    // TODO: `Arc` isn't enough if you want a **mutable** shared state.
+    // TODO: `Arc` недостатньо, якщо вам потрібен **змінний** спільний стан.
     let status = Arc::new(JobStatus { jobs_done: 0 });
 
     let mut handles = Vec::new();
@@ -18,17 +18,17 @@ fn main() {
         let handle = thread::spawn(move || {
             thread::sleep(Duration::from_millis(250));
 
-            // TODO: You must take an action before you update a shared value.
+            // TODO: Ви маєте щось зробити перед оновленням спільного значення.
             status_shared.jobs_done += 1;
         });
         handles.push(handle);
     }
 
-    // Waiting for all jobs to complete.
+    // Чекаємо завершення всіх робіт (jobs).
     for handle in handles {
         handle.join().unwrap();
     }
 
-    // TODO: Print the value of `JobStatus.jobs_done`.
-    println!("Jobs done: {}", todo!());
+    // TODO: Виведіть значення `JobStatus.jobs_done`.
+    println!("Справу зроблено: {}", todo!());
 }

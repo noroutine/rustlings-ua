@@ -1,8 +1,8 @@
-// Let's define a simple model to track Rustlings' exercise progress. Progress
-// will be modelled using a hash map. The name of the exercise is the key and
-// the progress is the value. Two counting functions were created to count the
-// number of exercises with a given progress. Recreate this counting
-// functionality using iterators. Try to not use imperative loops (for/while).
+// Давайте визначимо просту модель для відстеження прогресу вправ Rustlings. Прогрес
+// буде моделюватися за допомогою хеш-мапи (hash map). Назва вправи — це ключ, а
+// прогрес — це значення. Було створено дві функції підрахунку, щоб порахувати
+// кількість вправ із заданим прогресом. Відстворіть цю функціональність
+// підрахунку, використовуючи ітератори. Намагайтеся не використовувати імперативні цикли (for/while).
 
 use std::collections::HashMap;
 
@@ -24,7 +24,7 @@ fn count_for(map: &HashMap<String, Progress>, value: Progress) -> usize {
 }
 
 fn count_iterator(map: &HashMap<String, Progress>, value: Progress) -> usize {
-    // `map` is a hash map with `String` keys and `Progress` values.
+    // `map` — це хеш-мапа з `String` ключами та `Progress` значеннями.
     // map = { "variables1": Complete, "from_str": None, … }
     map.values().filter(|val| **val == value).count()
 }
@@ -38,7 +38,7 @@ fn count_collection_for(collection: &[HashMap<String, Progress>], value: Progres
 }
 
 fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Progress) -> usize {
-    // `collection` is a slice of hash maps.
+    // `collection` — це зріз хеш-мап.
     // collection = [{ "variables1": Complete, "from_str": None, … },
     //               { "variables2": Complete, … }, … ]
     collection
@@ -47,25 +47,25 @@ fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Pr
         .sum()
 }
 
-// Equivalent to `count_collection_iterator` and `count_iterator`, iterating as
-// if the collection was a single container instead of a container of containers
-// (and more accurately, a single iterator instead of an iterator of iterators).
+// Еквівалентний `count_collection_iterator` та `count_iterator`, ітерує,
+// ніби колекція була одним контейнером замість контейнера контейнерів
+// (і більш точно, одним ітератором замість ітератора ітераторів).
 fn count_collection_iterator_flat(
     collection: &[HashMap<String, Progress>],
     value: Progress,
 ) -> usize {
-    // `collection` is a slice of hash maps.
+    // `collection` — це зріз хеш-мап.
     // collection = [{ "variables1": Complete, "from_str": None, … },
     //               { "variables2": Complete, … }, … ]
     collection
         .iter()
-        .flat_map(HashMap::values) // or just `.flatten()` when wanting the default iterator (`HashMap::iter`)
+        .flat_map(HashMap::values) // або просто `.flatten()`, якщо потрібен стандартний ітератор (`HashMap::iter`)
         .filter(|val| **val == value)
         .count()
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

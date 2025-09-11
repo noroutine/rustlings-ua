@@ -1,9 +1,9 @@
-# Smart Pointers
+# Розумні показчики (Smart Pointers)
 
-In Rust, smart pointers are variables that contain an address in memory and reference some other data, but they also have additional metadata and capabilities.
-Smart pointers in Rust often own the data they point to, while references only borrow data.
+У Rust розумні показчики (smart pointers) — це змінні, що містять адресу в пам'яті та посилаються на якісь інші дані, але також мають додаткові метадані та можливості.
+Розумні показчики в Rust часто володіють даними, на які вони вказують, тоді як звичайні посилання (references) лише запозичують дані.
 
-## Further Information
+## Додаткова інформація
 
 - [Smart Pointers](https://doc.rust-lang.org/book/ch15-00-smart-pointers.html)
 - [Using Box to Point to Data on the Heap](https://doc.rust-lang.org/book/ch15-01-box.html)

@@ -40,6 +40,18 @@
 - `traits` → трейти (traits)
 - `generics` → дженерики (generics)
 - `pattern matching` → зіставлення зразків (pattern matching)
+- `compiler error` → помилка компіляції (а не компілятора)
+- `type annotation` → анотація типу
+- `return type` → тип повернення
+- `iterators` → ітератори (iterators)
+- `smart pointers` → розумні показчики (smart pointers)
+- `threads` → потоки (threads)
+- `thread-safe` → потокобезпечний (thread-safe)
+- `heap` → купа (heap)
+- `reference counting` → підрахунок посилань (reference counting)
+- `Clone-On-Write` → Clone-On-Write (залишаємо як є)
+- `shared state` → спільний стан- message passing → передача повідомлень
+- `message passing` → передача повідомлень
 
 ### Гармонійний переклад термінів
 

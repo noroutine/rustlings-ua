@@ -1,7 +1,7 @@
-// In this exercise, we want to express the concept of multiple owners via the
-// `Rc<T>` type. This is a model of our solar system - there is a `Sun` type and
-// multiple `Planet`s. The planets take ownership of the sun, indicating that
-// they revolve around the sun.
+// У цій вправі ми хочемо виразити концепцію багатьох власників через
+// тип `Rc<T>`. Це модель нашої сонячної системи - є тип `Sun` і
+// кілька `Planet`. Планети отримують володіння над сонцем, що вказує,
+// що вони обертаються навколо сонця.
 
 use std::rc::Rc;
 
@@ -22,12 +22,12 @@ enum Planet {
 
 impl Planet {
     fn details(&self) {
-        println!("Hi from {self:?}!");
+        println!("Привіт з {self:?}!");
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]
@@ -37,65 +37,65 @@ mod tests {
     #[test]
     fn rc1() {
         let sun = Rc::new(Sun);
-        println!("reference count = {}", Rc::strong_count(&sun)); // 1 reference
+        println!("reference count = {}", Rc::strong_count(&sun)); // 1 посилання
 
         let mercury = Planet::Mercury(Rc::clone(&sun));
-        println!("reference count = {}", Rc::strong_count(&sun)); // 2 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 2 посилання
         mercury.details();
 
         let venus = Planet::Venus(Rc::clone(&sun));
-        println!("reference count = {}", Rc::strong_count(&sun)); // 3 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 3 посилання
         venus.details();
 
         let earth = Planet::Earth(Rc::clone(&sun));
-        println!("reference count = {}", Rc::strong_count(&sun)); // 4 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 4 посилання
         earth.details();
 
         let mars = Planet::Mars(Rc::clone(&sun));
-        println!("reference count = {}", Rc::strong_count(&sun)); // 5 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 5 посилань
         mars.details();
 
         let jupiter = Planet::Jupiter(Rc::clone(&sun));
-        println!("reference count = {}", Rc::strong_count(&sun)); // 6 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 6 посилань
         jupiter.details();
 
         let saturn = Planet::Saturn(Rc::clone(&sun));
-        println!("reference count = {}", Rc::strong_count(&sun)); // 7 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 7 посилань
         saturn.details();
 
         let uranus = Planet::Uranus(Rc::clone(&sun));
-        println!("reference count = {}", Rc::strong_count(&sun)); // 8 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 8 посилань
         uranus.details();
 
         let neptune = Planet::Neptune(Rc::clone(&sun));
-        println!("reference count = {}", Rc::strong_count(&sun)); // 9 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 9 посилань
         neptune.details();
 
         assert_eq!(Rc::strong_count(&sun), 9);
 
         drop(neptune);
-        println!("reference count = {}", Rc::strong_count(&sun)); // 8 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 8 посилань
 
         drop(uranus);
-        println!("reference count = {}", Rc::strong_count(&sun)); // 7 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 7 посилань
 
         drop(saturn);
-        println!("reference count = {}", Rc::strong_count(&sun)); // 6 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 6 посилань
 
         drop(jupiter);
-        println!("reference count = {}", Rc::strong_count(&sun)); // 5 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 5 посилань
 
         drop(mars);
-        println!("reference count = {}", Rc::strong_count(&sun)); // 4 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 4 посилання
 
         drop(earth);
-        println!("reference count = {}", Rc::strong_count(&sun)); // 3 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 3 посилання
 
         drop(venus);
-        println!("reference count = {}", Rc::strong_count(&sun)); // 2 references
+        println!("reference count = {}", Rc::strong_count(&sun)); // 2 посилання
 
         drop(mercury);
-        println!("reference count = {}", Rc::strong_count(&sun)); // 1 reference
+        println!("reference count = {}", Rc::strong_count(&sun)); // 1 посилання
 
         assert_eq!(Rc::strong_count(&sun), 1);
     }

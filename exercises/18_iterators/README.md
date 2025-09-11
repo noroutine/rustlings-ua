@@ -1,8 +1,8 @@
-# Iterators
+# Ітератори (Iterators)
 
-This section will teach you about Iterators.
+Цей розділ навчить вас про ітератори (iterators).
 
-## Further information
+## Додаткова інформація
 
-- [Iterator](https://doc.rust-lang.org/book/ch13-02-iterators.html)
-- [Iterator documentation](https://doc.rust-lang.org/stable/std/iter/)
+- [Ітератори (Iterators)](https://doc.rust-lang.org/book/ch13-02-iterators.html)
+- [Документація про ітератори (Iterator documentation)](https://doc.rust-lang.org/stable/std/iter/)

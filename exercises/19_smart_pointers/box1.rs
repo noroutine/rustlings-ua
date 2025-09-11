@@ -1,35 +1,35 @@
-// At compile time, Rust needs to know how much space a type takes up. This
-// becomes problematic for recursive types, where a value can have as part of
-// itself another value of the same type. To get around the issue, we can use a
-// `Box` - a smart pointer used to store data on the heap, which also allows us
-// to wrap a recursive type.
+// Під час компіляції Rust повинен знати, скільки місця в памʼяті займає тип. Це
+// проблематично для рекурсивних типів, де значення може містити
+// як свою частину інше значення того самого типу. Щоб обійти цю проблему, ми
+// можемо використати `Box` — розумний показчик (smart pointer), який використовується
+// для зберігання даних у купі (heap), що також дозволяє нам обгорнути рекурсивний тип.
 //
-// The recursive type we're implementing in this exercise is the "cons list", a
-// data structure frequently found in functional programming languages. Each
-// item in a cons list contains two elements: The value of the current item and
-// the next item. The last item is a value called `Nil`.
+// Рекурсивний тип, який ми реалізуємо в цій вправі, — це "список cons", структура
+// даних, що часто зустрічається в функціональних мовах програмування. Кожен
+// елемент у списку cons містить два елементи: значення поточного елемента та
+// наступний елемент. Останній елемент — це значення, назване `Nil`.
 
-// TODO: Use a `Box` in the enum definition to make the code compile.
+// TODO: Використайте `Box` у визначенні enum, щоб код компілювався.
 #[derive(PartialEq, Debug)]
 enum List {
     Cons(i32, List),
     Nil,
 }
 
-// TODO: Create an empty cons list.
+// TODO: Створіть порожній список cons.
 fn create_empty_list() -> List {
     todo!()
 }
 
-// TODO: Create a non-empty cons list.
+// TODO: Створіть непорожній список cons.
 fn create_non_empty_list() -> List {
     todo!()
 }
 
 fn main() {
-    println!("This is an empty cons list: {:?}", create_empty_list());
+    println!("Це порожній список: {:?}", create_empty_list());
     println!(
-        "This is a non-empty cons list: {:?}",
+        "Це непорожній список: {:?}",
         create_non_empty_list(),
     );
 }

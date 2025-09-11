@@ -1,6 +1,6 @@
-// 3 possible solutions are presented.
+// Представлено 3 можливі рішення.
 
-// With `for` loop and a mutable variable.
+// З циклом `for` та змінюваною змінною.
 fn factorial_for(num: u64) -> u64 {
     let mut result = 1;
 
@@ -11,32 +11,32 @@ fn factorial_for(num: u64) -> u64 {
     result
 }
 
-// Equivalent to `factorial_for` but shorter and without a `for` loop and
-// mutable variables.
+// Еквівалентний `factorial_for`, але коротший і без циклу `for` та
+// змінюваних змінних.
 fn factorial_fold(num: u64) -> u64 {
-    // Case num==0: The iterator 2..=0 is empty
-    //              -> The initial value of `fold` is returned which is 1.
-    // Case num==1: The iterator 2..=1 is also empty
-    //              -> The initial value 1 is returned.
-    // Case num==2: The iterator 2..=2 contains one element
-    //              -> The initial value 1 is multiplied by 2 and the result
-    //                 is returned.
-    // Case num==3: The iterator 2..=3 contains 2 elements
-    //              -> 1 * 2 is calculated, then the result 2 is multiplied by
-    //                 the second element 3 so the result 6 is returned.
-    // And so on…
+    // Випадок num==0: ітератор 2..=0 порожній
+    //                  -> Повертається початкове значення `fold`, яким є 1.
+    // Випадок num==1: ітератор 2..=1 теж порожній
+    //                  -> Повертається початкове значення 1.
+    // Випадок num==2: ітератор 2..=2 містить один елемент
+    //                  -> Початкове значення 1 помножується на 2 і результат
+    //                     повертається.
+    // Випадок num==3: ітератор 2..=3 містить 2 елементи
+    //                  -> Обчислюється 1 * 2, потім результат 2 помножується на
+    //                     другий елемент 3, тому повертається результат 6.
+    // І так далі…
     #[allow(clippy::unnecessary_fold)]
     (2..=num).fold(1, |acc, x| acc * x)
 }
 
-// Equivalent to `factorial_fold` but with a built-in method that is suggested
-// by Clippy.
+// Еквівалентний `factorial_fold`, але з вбудованим методом, який пропонує
+// Clippy.
 fn factorial_product(num: u64) -> u64 {
     (2..=num).product()
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

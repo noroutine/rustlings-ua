@@ -1,10 +1,10 @@
 #[derive(Debug, PartialEq, Eq)]
 enum DivisionError {
-    // Example: 42 / 0
+    // Приклад: 42 / 0
     DivideByZero,
-    // Only case for `i64`: `i64::MIN / -1` because the result is `i64::MAX + 1`
+    // Єдиний випадок для `i64`: `i64::MIN / -1`, тому що результат — `i64::MAX + 1`
     IntegerOverflow,
-    // Example: 5 / 2 = 2.5
+    // Приклад: 5 / 2 = 2.5
     NotDivisible,
 }
 
@@ -28,8 +28,8 @@ fn result_with_list() -> Result<Vec<i64>, DivisionError> {
     //                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     let numbers = [27, 297, 38502, 81];
     let division_results = numbers.into_iter().map(|n| divide(n, 27));
-    // Collects to the expected return type. Returns the first error in the
-    // division results (if one exists).
+    // Збирає у очікуваний тип повернення. Повертає першу помилку в
+    // результатах ділення в разі, якщо десь була помилка.
     division_results.collect()
 }
 
@@ -37,12 +37,12 @@ fn list_of_results() -> Vec<Result<i64, DivisionError>> {
     //               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     let numbers = [27, 297, 38502, 81];
     let division_results = numbers.into_iter().map(|n| divide(n, 27));
-    // Collects to the expected return type.
+    // Збирає у очікуваний тип повернення.
     division_results.collect()
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

@@ -1,8 +1,8 @@
-// Let's define a simple model to track Rustlings' exercise progress. Progress
-// will be modelled using a hash map. The name of the exercise is the key and
-// the progress is the value. Two counting functions were created to count the
-// number of exercises with a given progress. Recreate this counting
-// functionality using iterators. Try to not use imperative loops (for/while).
+// Давайте визначимо просту модель для відстеження прогресу вправ Rustlings. Прогрес
+// буде моделюватися за допомогою хеш-мапи (hash map). Назва вправи — це ключ, а
+// прогрес — це значення. Було створено дві функції підрахунку, щоб порахувати
+// кількість вправ із заданим прогресом. Відтворіть цю функціональність
+// підрахунку, використовуючи ітератори. Намагайтеся не використовувати імперативні цикли (for/while).
 
 use std::collections::HashMap;
 
@@ -23,10 +23,10 @@ fn count_for(map: &HashMap<String, Progress>, value: Progress) -> usize {
     count
 }
 
-// TODO: Implement the functionality of `count_for` but with an iterator instead
-// of a `for` loop.
+// TODO: Реалізуйте функціональність `count_for`, але з ітератором замість
+// цикла `for`.
 fn count_iterator(map: &HashMap<String, Progress>, value: Progress) -> usize {
-    // `map` is a hash map with `String` keys and `Progress` values.
+    // `map` — це хеш-мапа з `String` ключами та `Progress` значеннями.
     // map = { "variables1": Complete, "from_str": None, … }
 }
 
@@ -42,16 +42,16 @@ fn count_collection_for(collection: &[HashMap<String, Progress>], value: Progres
     count
 }
 
-// TODO: Implement the functionality of `count_collection_for` but with an
-// iterator instead of a `for` loop.
+// TODO: Реалізуйте функціональність `count_collection_for`, але з
+// ітератором замість цикла `for`.
 fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Progress) -> usize {
-    // `collection` is a slice of hash maps.
+    // `collection` — це зріз хеш-мап.
     // collection = [{ "variables1": Complete, "from_str": None, … },
     //               { "variables2": Complete, … }, … ]
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

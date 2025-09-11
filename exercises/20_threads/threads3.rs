@@ -15,11 +15,11 @@ impl Queue {
 }
 
 fn send_tx(q: Queue, tx: mpsc::Sender<u32>) {
-    // TODO: We want to send `tx` to both threads. But currently, it is moved
-    // into the first thread. How could you solve this problem?
+    // TODO: Ми хочемо надіслати `tx` обом ниткам. Але він переміщується
+    // в першу нитку. Як ви могли б вирішити цю проблему?
     thread::spawn(move || {
         for val in q.first_half {
-            println!("Sending {val:?}");
+            println!("Висилаю {val:?}");
             tx.send(val).unwrap();
             thread::sleep(Duration::from_millis(250));
         }
@@ -27,7 +27,7 @@ fn send_tx(q: Queue, tx: mpsc::Sender<u32>) {
 
     thread::spawn(move || {
         for val in q.second_half {
-            println!("Sending {val:?}");
+            println!("Висилаю {val:?}");
             tx.send(val).unwrap();
             thread::sleep(Duration::from_millis(250));
         }
@@ -35,7 +35,7 @@ fn send_tx(q: Queue, tx: mpsc::Sender<u32>) {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

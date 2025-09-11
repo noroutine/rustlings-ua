@@ -1,19 +1,19 @@
 fn factorial(num: u64) -> u64 {
-    // TODO: Complete this function to return the factorial of `num` which is
-    // defined as `1 * 2 * 3 * … * num`.
+    // TODO: Доповніть цю функцію, щоб вона повертала факторіал `num`, який
+    // визначається як `1 * 2 * 3 * … * num`.
     // https://en.wikipedia.org/wiki/Factorial
     //
-    // Do not use:
-    // - early returns (using the `return` keyword explicitly)
-    // Try not to use:
-    // - imperative style loops (for/while)
-    // - additional variables
-    // For an extra challenge, don't use:
-    // - recursion
+    // Не використовуйте:
+    // - ранні повернення (явне використання ключового слова `return`)
+    // Намагайтеся не використовувати:
+    // - імперативні цикли (for/while)
+    // - додаткові змінні
+    // За бажанням, для ускладнення задачі, не використовуйте:
+    // - рекурсію
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]

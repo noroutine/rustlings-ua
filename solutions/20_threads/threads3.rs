@@ -15,13 +15,13 @@ impl Queue {
 }
 
 fn send_tx(q: Queue, tx: mpsc::Sender<u32>) {
-    // Clone the sender `tx` first.
+    // Спочатку клонуємо відправник `tx`.
     let tx_clone = tx.clone();
     thread::spawn(move || {
         for val in q.first_half {
-            println!("Sending {val:?}");
-            // Then use the clone in the first thread. This means that
-            // `tx_clone` is moved to the first thread and `tx` to the second.
+            println!("Висилаю {val:?}");
+            // Потім використовуємо клон у першому потоці. Це означає, що
+            // `tx_clone` переміщується на перший потік, а `tx` — на другий.
             tx_clone.send(val).unwrap();
             thread::sleep(Duration::from_millis(250));
         }
@@ -29,7 +29,7 @@ fn send_tx(q: Queue, tx: mpsc::Sender<u32>) {
 
     thread::spawn(move || {
         for val in q.second_half {
-            println!("Sending {val:?}");
+            println!("Висилаю {val:?}");
             tx.send(val).unwrap();
             thread::sleep(Duration::from_millis(250));
         }
@@ -37,7 +37,7 @@ fn send_tx(q: Queue, tx: mpsc::Sender<u32>) {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Тут ви можете за бажанням поекспериментувати.
 }
 
 #[cfg(test)]
