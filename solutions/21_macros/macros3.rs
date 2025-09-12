@@ -1,9 +1,9 @@
-// Added the attribute `macro_use` attribute.
+// Додали атрибут `macro_use`.
 #[macro_use]
 mod macros {
     macro_rules! my_macro {
         () => {
-            println!("Check out my macro!");
+            println!("Подивіться на мій макрос!");
         };
     }
 }

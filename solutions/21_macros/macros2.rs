@@ -1,7 +1,7 @@
-// Moved the macro definition to be before its call.
+// Перемістили визначення макроса перед його викликом.
 macro_rules! my_macro {
     () => {
-        println!("Check out my macro!");
+        println!("Подивіться на мій макрос!");
     };
 }
 

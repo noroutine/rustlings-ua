@@ -1,11 +1,11 @@
-// Added semicolons to separate the macro arms.
+// Додали крапки з комою для розділення гілок макроса (macro arms).
 #[rustfmt::skip]
 macro_rules! my_macro {
     () => {
-        println!("Check out my macro!");
+        println!("Подивіться на мій макрос!");
     };
     ($val:expr) => {
-        println!("Look at this other macro: {}", $val);
+        println!("Подивіться на мій інший макрос: {}", $val);
     };
 }
 
