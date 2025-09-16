@@ -1,6 +1,6 @@
-// The `From` trait is used for value-to-value conversions. If `From` is
-// implemented, an implementation of `Into` is automatically provided.
-// You can read more about it in the documentation:
+// Трейт `From` використовується для перетворень значення-у-значення. Якщо `From`
+// реалізований, то реалізація `Into` надається автоматично.
+// Ви можете прочитати більше про це у документації:
 // https://doc.rust-lang.org/std/convert/trait.From.html
 
 #[derive(Debug)]
@@ -9,8 +9,8 @@ struct Person {
     age: u8,
 }
 
-// We implement the Default trait to use it as a fallback when the provided
-// string is not convertible into a `Person` object.
+// Ми реалізуємо трейт Default, щоб використовувати його як запасний варіант,
+// коли наданий рядок не може бути перетворений на об'єкт `Person`.
 impl Default for Person {
     fn default() -> Self {
         Self {
@@ -24,7 +24,7 @@ impl From<&str> for Person {
     fn from(s: &str) -> Self {
         let mut split = s.split(',');
         let (Some(name), Some(age), None) = (split.next(), split.next(), split.next()) else {
-            //                      ^^^^ there should be no third element
+            //                      ^^^^ не має бути третього елементу
             return Self::default();
         };
 
@@ -44,11 +44,11 @@ impl From<&str> for Person {
 }
 
 fn main() {
-    // Use the `from` function.
+    // Використайте функцію `from`.
     let p1 = Person::from("Mark,20");
     println!("{p1:?}");
 
-    // Since `From` is implemented for Person, we are able to use `Into`.
+    // Оскільки `From` реалізований для Person, ми можемо використовувати `Into`.
     let p2: Person = "Gerald,70".into();
     println!("{p2:?}");
 }

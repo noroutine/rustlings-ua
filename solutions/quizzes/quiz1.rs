@@ -1,7 +1,7 @@
-// Mary is buying apples. The price of an apple is calculated as follows:
-// - An apple costs 2 rustbucks.
-// - However, if Mary buys more than 40 apples, the price of each apple in the
-// entire order is reduced to only 1 rustbuck!
+// Мері купує яблука. Ціна яблука обчислюється наступним чином:
+// - Одне яблуко коштує 2 растбаки.
+// - Однак, якщо Мері купує більше 40 яблук, ціна кожного яблука в
+//   всьому замовленні зменшується до лише 1 растбака!
 
 fn calculate_price_of_apples(n_apples: u64) -> u64 {
     if n_apples > 40 {
@@ -12,10 +12,10 @@ fn calculate_price_of_apples(n_apples: u64) -> u64 {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете експериментувати тут за бажанням.
 }
 
-// Don't change the tests!
+// Не змінюйте тести!
 #[cfg(test)]
 mod tests {
     use super::*;

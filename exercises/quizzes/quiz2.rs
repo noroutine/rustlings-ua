@@ -1,21 +1,21 @@
-// This is a quiz for the following sections:
-// - Strings
-// - Vecs
-// - Move semantics
-// - Modules
-// - Enums
+// Це квіз для наступних розділів:
+// - Рядки (Strings)
+// - Вектори (Vecs)
+// - Семантика переміщення (Move semantics)
+// - Модулі (Modules)
+// - Перелічення (Enums)
 //
-// Let's build a little machine in the form of a function. As input, we're going
-// to give a list of strings and commands. These commands determine what action
-// is going to be applied to the string. It can either be:
-// - Uppercase the string
-// - Trim the string
-// - Append "bar" to the string a specified amount of times
+// Давайте побудуємо невелику машину у вигляді функції. Як вхідні дані, ми
+// подаємо список рядків і команд. Ці команди визначають, яку дію
+// буде застосовано до рядка. Це може бути:
+// - Перевести рядок у верхній регістр
+// - Обрізати рядок
+// - Додати "bar" до рядка вказану кількість разів
 //
-// The exact form of this will be:
-// - The input is going to be a Vector of 2-length tuples,
-//   the first element is the string, the second one is the command.
-// - The output element is going to be a vector of strings.
+// Точна форма цього буде наступною:
+// - Вхід буде вектор 2-елементних кортежів,
+//   перший елемент - рядок, другий - команда.
+// - Вихідний елемент буде вектор рядків.
 
 enum Command {
     Uppercase,
@@ -26,17 +26,17 @@ enum Command {
 mod my_module {
     use super::Command;
 
-    // TODO: Complete the function as described above.
+    // TODO: Доповніть функцію, як описано вище.
     // pub fn transformer(input: ???) -> ??? { ??? }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете експериментувати тут за бажанням.
 }
 
 #[cfg(test)]
 mod tests {
-    // TODO: What do we need to import to have `transformer` in scope?
+    // TODO: Що нам потрібно імпортувати, щоб `transformer` був у області видимості?
     // use ???;
     use super::Command;
 

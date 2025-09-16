@@ -1,6 +1,6 @@
-// Type casting in Rust is done via the usage of the `as` operator.
-// Note that the `as` operator is not only used when type casting. It also helps
-// with renaming imports.
+// Приведення типів у Rust виконується за допомогою оператора `as`.
+// Зауважте, що оператор `as` використовується не тільки для приведення типів. Він також допомагає
+// з перейменуванням імпортів.
 
 fn average(values: &[f64]) -> f64 {
     let total = values.iter().sum::<f64>();

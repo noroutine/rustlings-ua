@@ -1,15 +1,15 @@
-// An imaginary magical school has a new report card generation system written
-// in Rust! Currently, the system only supports creating report cards where the
-// student's grade is represented numerically (e.g. 1.0 -> 5.5). However, the
-// school also issues alphabetical grades (A+ -> F-) and needs to be able to
-// print both types of report card!
+// Уявна магічна школа має нову систему генерації рапортів успішності, написану
+// на Rust! Наразі система підтримує лише створення рапортів, де
+// оцінка студента представлена числово (наприклад, 1.0 -> 5.5). Однак
+// школа також виставляє літерні оцінки (A+ -> F-) і потребує можливості
+// друкувати обидва типи рапортів!
 //
-// Make the necessary code changes in the struct `ReportCard` and the impl
-// block to support alphabetical report cards in addition to numerical ones.
+// Зробіть необхідні зміни в структурі `ReportCard` і блоці impl,
+// щоб підтримувати літерні рапорти додатково до числових.
 
 use std::fmt::Display;
 
-// Make the struct generic over `T`.
+// Зробимо структуру дженеричною над `T`.
 struct ReportCard<T> {
     //           ^^^
     grade: T,
@@ -18,9 +18,9 @@ struct ReportCard<T> {
     student_age: u8,
 }
 
-// To be able to print the grade, it has to implement the `Display` trait.
+// Щоб можна було вивести оцінку, вона має реалізовувати трейт `Display`.
 impl<T: Display> ReportCard<T> {
-    //  ^^^^^^^ require that `T` implements `Display`.
+    //  ^^^^^^^ вимагаємо, щоб `T` реалізовував `Display`.
     fn print(&self) -> String {
         format!(
             "{} ({}) - achieved a grade of {}",
@@ -30,7 +30,7 @@ impl<T: Display> ReportCard<T> {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете експериментувати тут за бажанням.
 }
 
 #[cfg(test)]

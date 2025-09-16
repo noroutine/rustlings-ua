@@ -1,22 +1,22 @@
-// This is a quiz for the following sections:
-// - Variables
-// - Functions
-// - If
+// Це квіз для наступних розділів:
+// - Змінні (Variables)
+// - Функції (Functions)
+// - Умовні конструкції (If)
 //
-// Mary is buying apples. The price of an apple is calculated as follows:
-// - An apple costs 2 rustbucks.
-// - However, if Mary buys more than 40 apples, the price of each apple in the
-// entire order is reduced to only 1 rustbuck!
+// Мері купує яблука. Ціна яблука обчислюється наступним чином:
+// - Одне яблуко коштує 2 растбаки.
+// - Однак, якщо Мері купує більше 40 яблук, ціна кожного яблука в
+//   всьому замовленні зменшується до лише 1 растбака!
 
-// TODO: Write a function that calculates the price of an order of apples given
-// the quantity bought.
+// TODO: Напишіть функцію, яка обчислює ціну замовлення яблук за заданою
+// кількістю.
 // fn calculate_price_of_apples(???) -> ??? { ??? }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете експериментувати тут за бажанням.
 }
 
-// Don't change the tests!
+// Не змінюйте тести!
 #[cfg(test)]
 mod tests {
     use super::*;

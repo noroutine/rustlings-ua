@@ -19,7 +19,7 @@ mod delicious_snacks {
 
 fn main() {
     println!(
-        "улюблені закуски: {} і {},"
+        "улюблені закуски: {} і {}",
         delicious_snacks::fruit,
         delicious_snacks::veggie,
     );

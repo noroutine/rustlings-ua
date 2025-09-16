@@ -1,7 +1,7 @@
-// `TryFrom` is a simple and safe type conversion that may fail in a controlled
-// way under some circumstances. Basically, this is the same as `From`. The main
-// difference is that this should return a `Result` type instead of the target
-// type itself. You can read more about it in the documentation:
+// `TryFrom` - це просте та безпечне перетворення типів, яке може не вдатися
+// контрольованим чином за певних обставин. По суті, це те саме, що й `From`.
+// Основна відмінність полягає в тому, що це має повертати тип `Result`
+// замість самого цільового типу. Ви можете прочитати більше про це у документації:
 // https://doc.rust-lang.org/std/convert/trait.TryFrom.html
 
 #![allow(clippy::useless_vec)]
@@ -14,12 +14,12 @@ struct Color {
     blue: u8,
 }
 
-// We will use this error type for the `TryFrom` conversions.
+// Ми будемо використовувати цей тип помилки для перетворень `TryFrom`.
 #[derive(Debug, PartialEq)]
 enum IntoColorError {
-    // Incorrect length of slice
+    // Неправильна довжина зрізу (slice)
     BadLen,
-    // Integer conversion error
+    // Помилка перетворення цілого числа
     IntConversion,
 }
 
@@ -43,7 +43,7 @@ impl TryFrom<[i16; 3]> for Color {
     type Error = IntoColorError;
 
     fn try_from(arr: [i16; 3]) -> Result<Self, Self::Error> {
-        // Reuse the implementation for a tuple.
+        // Повторно використовуємо реалізацію для кортежу.
         Self::try_from((arr[0], arr[1], arr[2]))
     }
 }
@@ -52,30 +52,30 @@ impl TryFrom<&[i16]> for Color {
     type Error = IntoColorError;
 
     fn try_from(slice: &[i16]) -> Result<Self, Self::Error> {
-        // Check the length.
+        // Перевіряємо довжину.
         if slice.len() != 3 {
             return Err(IntoColorError::BadLen);
         }
 
-        // Reuse the implementation for a tuple.
+        // Повторно використовуємо реалізацію для кортежу.
         Self::try_from((slice[0], slice[1], slice[2]))
     }
 }
 
 fn main() {
-    // Using the `try_from` function.
+    // Використання функції `try_from`.
     let c1 = Color::try_from((183, 65, 14));
     println!("{c1:?}");
 
-    // Since `TryFrom` is implemented for `Color`, we can use `TryInto`.
+    // Оскільки `TryFrom` реалізований для `Color`, ми можемо використовувати `TryInto`.
     let c2: Result<Color, _> = [183, 65, 14].try_into();
     println!("{c2:?}");
 
     let v = vec![183, 65, 14];
-    // With slice we should use the `try_from` function
+    // З зрізом ми маємо використовувати функцію `try_from`
     let c3 = Color::try_from(&v[..]);
     println!("{c3:?}");
-    // or put the slice within round brackets and use `try_into`.
+    // або помістити зріз у круглі дужки та використати `try_into`.
     let c4: Result<Color, _> = (&v[..]).try_into();
     println!("{c4:?}");
 }

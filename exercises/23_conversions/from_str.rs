@@ -1,8 +1,8 @@
-// This is similar to the previous `from_into` exercise. But this time, we'll
-// implement `FromStr` and return errors instead of falling back to a default
-// value. Additionally, upon implementing `FromStr`, you can use the `parse`
-// method on strings to generate an object of the implementor type. You can read
-// more about it in the documentation:
+// Це схоже на попередню вправу `from_into`. Але цього разу ми реалізуємо
+// `FromStr` і повертаємо помилки замість повернення до значення
+// за замовчуванням. Крім того, після реалізації `FromStr`, ви можете використовувати
+// метод `parse` на рядках, щоб створити об'єкт реалізаційного типу. Ви можете
+// прочитати більше про це у документації:
 // https://doc.rust-lang.org/std/str/trait.FromStr.html
 
 use std::num::ParseIntError;
@@ -14,30 +14,30 @@ struct Person {
     age: u8,
 }
 
-// We will use this error type for the `FromStr` implementation.
+// Ми будемо використовувати цей тип помилки для реалізації `FromStr`.
 #[derive(Debug, PartialEq)]
 enum ParsePersonError {
-    // Incorrect number of fields
+    // Неправильна кількість полів
     BadLen,
-    // Empty name field
+    // Порожнє поле імені
     NoName,
-    // Wrapped error from parse::<u8>()
+    // Обгорнута помилка з parse::<u8>()
     ParseInt(ParseIntError),
 }
 
-// TODO: Complete this `FromStr` implementation to be able to parse a `Person`
-// out of a string in the form of "Mark,20".
-// Note that you'll need to parse the age component into a `u8` with something
-// like `"4".parse::<u8>()`.
+// TODO: Доповніть цю реалізацію `FromStr`, щоб можна було розібрати `Person`
+// з рядка в форматі "Mark,20".
+// Зауважте, що вам потрібно буде розібрати компонент віку на `u8` з
+// чимось на кшталт `"4".parse::<u8>()`.
 //
-// Steps:
-// 1. Split the given string on the commas present in it.
-// 2. If the split operation returns less or more than 2 elements, return the
-//    error `ParsePersonError::BadLen`.
-// 3. Use the first element from the split operation as the name.
-// 4. If the name is empty, return the error `ParsePersonError::NoName`.
-// 5. Parse the second element from the split operation into a `u8` as the age.
-// 6. If parsing the age fails, return the error `ParsePersonError::ParseInt`.
+// Кроки:
+// 1. Розділіть наданий рядок за комами, які в ньому є.
+// 2. Якщо операція розділення повертає менше або більше 2 елементів,
+//    повернути помилку `ParsePersonError::BadLen`.
+// 3. Використати перший елемент з операції розділення як ім'я.
+// 4. Якщо ім'я порожнє, повернути помилку `ParsePersonError::NoName`.
+// 5. Розібрати другий елемент з операції розділення на `u8` як вік.
+// 6. Якщо розбор віку не вдається, повернути помилку `ParsePersonError::ParseInt`.
 impl FromStr for Person {
     type Err = ParsePersonError;
 

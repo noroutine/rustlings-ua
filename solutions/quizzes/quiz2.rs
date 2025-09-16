@@ -1,14 +1,14 @@
-// Let's build a little machine in the form of a function. As input, we're going
-// to give a list of strings and commands. These commands determine what action
-// is going to be applied to the string. It can either be:
-// - Uppercase the string
-// - Trim the string
-// - Append "bar" to the string a specified amount of times
+// Давайте побудуємо невелику машину у вигляді функції. Як вхідні дані, ми
+// подаємо список рядків і команд. Ці команди визначають, яку дію
+// буде застосовано до рядка. Це може бути:
+// - Перевести рядок у верхній регістр
+// - Обрізати рядок
+// - Додати "bar" до рядка вказану кількість разів
 //
-// The exact form of this will be:
-// - The input is going to be a vector of 2-length tuples,
-//   the first element is the string, the second one is the command.
-// - The output element is going to be a vector of strings.
+// Точна форма цього буде наступною:
+// - Вхід буде вектор 2-елементних кортежів,
+//   перший елемент - рядок, другий - команда.
+// - Вихідний елемент буде вектор рядків.
 
 enum Command {
     Uppercase,
@@ -19,28 +19,28 @@ enum Command {
 mod my_module {
     use super::Command;
 
-    // The solution with a loop. Check out `transformer_iter` for a version
-    // with iterators.
+    // Розв'язок з циклом. Подивіться на `transformer_iter` для версії
+    // з ітераторами.
     pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
         let mut output = Vec::new();
 
         for (string, command) in input {
-            // Create the new string.
+            // Створюємо новий рядок.
             let new_string = match command {
                 Command::Uppercase => string.to_uppercase(),
                 Command::Trim => string.trim().to_string(),
                 Command::Append(n) => string + &"bar".repeat(n),
             };
 
-            // Push the new string to the output vector.
+            // Додаємо новий рядок до вихідного вектора.
             output.push(new_string);
         }
 
         output
     }
 
-    // Equivalent to `transform` but uses an iterator instead of a loop for
-    // comparison. Don't worry, we will practice iterators later ;)
+    // Еквівалентно до `transform`, але використовує ітератор замість циклу для
+    // порівняння. Не хвилюйтеся, ми попрактикуємо ітератори пізніше ;)
     pub fn transformer_iter(input: Vec<(String, Command)>) -> Vec<String> {
         input
             .into_iter()
@@ -54,12 +54,12 @@ mod my_module {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Ви можете експериментувати тут за бажанням.
 }
 
 #[cfg(test)]
 mod tests {
-    // Import `transformer`.
+    // Імпортуємо `transformer`.
     use super::my_module::transformer;
 
     use super::Command;
