@@ -27,7 +27,7 @@ fn main() {
 
     // ПОПЕРЕДЖЕННЯ: Це байтове індексування, не символьне.
     // Символьне індексування можна виконати через `s.chars().nth(INDEX)`.
-    placeholder(&String::from("абв")[0..1]);
+    placeholder(&String::from("абв")[0..2]);
 
     placeholder("  привіт там ".trim());
 

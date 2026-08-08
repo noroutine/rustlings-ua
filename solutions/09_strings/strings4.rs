@@ -28,7 +28,7 @@ fn main() {
 
     // ПОПЕРЕДЖЕННЯ: Це байтове індексування, не символьне.
     // Символьне індексування можна виконати через `s.chars().nth(INDEX)`.
-    string_slice(&String::from("абв")[0..1]);
+    string_slice(&String::from("абв")[0..2]);
 
     string_slice("  привіт там ".trim());
 
